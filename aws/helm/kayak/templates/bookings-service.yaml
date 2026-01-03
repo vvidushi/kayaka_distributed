@@ -1,0 +1,72 @@
+{{- if .Values.bookingsService.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.bookingsService.name }}
+  namespace: {{ .Values.global.project }}-{{ .Values.global.environment }}
+  labels:
+    {{- include "kayak.labels" . | nindent 4 }}
+    app.kubernetes.io/component: bookings
+spec:
+  replicas: {{ .Values.bookingsService.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "kayak.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: bookings
+  template:
+    metadata:
+      labels:
+        {{- include "kayak.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: bookings
+    spec:
+      containers:
+      - name: {{ .Values.bookingsService.name }}
+        image: {{ include "kayak.image" (dict "root" . "image" .Values.bookingsService.image) }}
+        imagePullPolicy: {{ .Values.global.imagePullPolicy }}
+        ports:
+        - name: http
+          containerPort: {{ .Values.bookingsService.service.targetPort }}
+          protocol: TCP
+        env:
+        {{- range .Values.bookingsService.env }}
+        - name: {{ .name }}
+          value: {{ .value | quote }}
+        {{- end }}
+        envFrom:
+        {{- range .Values.bookingsService.envFrom }}
+        - {{ . | toYaml | nindent 10 | trim }}
+        {{- end }}
+        resources:
+          {{- toYaml .Values.bookingsService.resources | nindent 10 }}
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: http
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health/live
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.bookingsService.name }}
+  namespace: {{ .Values.global.project }}-{{ .Values.global.environment }}
+  labels:
+    {{- include "kayak.labels" . | nindent 4 }}
+    app.kubernetes.io/component: bookings
+spec:
+  type: {{ .Values.bookingsService.service.type }}
+  ports:
+  - port: {{ .Values.bookingsService.service.port }}
+    targetPort: {{ .Values.bookingsService.service.targetPort }}
+    protocol: TCP
+    name: http
+  selector:
+    {{- include "kayak.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/component: bookings
+{{- end }}

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ .Values.global.project }}-{{ .Values.global.environment }}
+  labels:
+    {{- include "kayak.labels" . | nindent 4 }}
+    project: {{ .Values.global.project }}
+    environment: {{ .Values.global.environment }}

@@ -1,0 +1,489 @@
+
+> kayak-frontend@1.0.0 dev
+> vite
+
+
+  VITE v5.4.21  ready in 95 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+
+🌼   daisyUI 4.12.24
+├─ ✔︎ 3 themes added		https://daisyui.com/docs/themes
+╰─ ❤︎ Support daisyUI project:	https://opencollective.com/daisyui
+
+
+🌼   daisyUI 4.12.24
+├─ ✔︎ 3 themes added		https://daisyui.com/docs/themes
+╰─ ❤︎ Support daisyUI project:	https://opencollective.com/daisyui
+
+11:32:23 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:32:34 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:32:43 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:33:04 AM [vite] hmr update /src/pages/listings/HotelsPage.jsx, /src/index.css
+11:33:20 AM [vite] hmr update /src/pages/listings/HotelsPage.jsx, /src/index.css
+11:33:27 AM [vite] hmr update /src/pages/listings/HotelsPage.jsx, /src/index.css
+11:33:42 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:33:42 AM [vite] Internal server error: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/HomePage.jsx: Unexpected token, expected "}" (2661:3)
+
+  2659 |       <BookingChatWidget />
+  2660 |     </div>
+> 2661 |   );
+       |    ^
+  2662 | };
+  2663 |
+  2664 | // Date Range Calendar Component with two calendars side by side
+  Plugin: vite:react-babel
+  File: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/HomePage.jsx:2661:3
+  2659|        <BookingChatWidget />
+  2660|      </div>
+  2661|    );
+     |     ^
+  2662|  };
+  2663|  
+      at constructor (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at JSXParserMixin.unexpected (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6644:16)
+      at JSXParserMixin.expect (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6924:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4666:10)
+      at JSXParserMixin.jsxParseElementAt (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4740:36)
+      at JSXParserMixin.jsxParseElement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4778:17)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4788:19)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12567:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11747:28)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12495:16)
+      at JSXParserMixin.parseExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.parseReturnStatement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13218:28)
+      at JSXParserMixin.parseStatementContent (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12874:21)
+      at JSXParserMixin.parseStatementLike (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at JSXParserMixin.parseStatementListItem (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13392:61)
+      at JSXParserMixin.parseBlockBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at JSXParserMixin.parseBlock (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13373:10)
+      at JSXParserMixin.parseFunctionBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12174:24)
+      at JSXParserMixin.parseArrowExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12149:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11759:12)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+11:33:45 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:33:47 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:33:47 AM [vite] Internal server error: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/HomePage.jsx: Unexpected token, expected "}" (2665:3)
+
+  2663 |       <BookingChatWidget />
+  2664 |     </div>
+> 2665 |   );
+       |    ^
+  2666 | };
+  2667 |
+  2668 | // Date Range Calendar Component with two calendars side by side
+  Plugin: vite:react-babel
+  File: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/HomePage.jsx:2665:3
+  2663|        <BookingChatWidget />
+  2664|      </div>
+  2665|    );
+     |     ^
+  2666|  };
+  2667|  
+      at constructor (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at JSXParserMixin.unexpected (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6644:16)
+      at JSXParserMixin.expect (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6924:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4666:10)
+      at JSXParserMixin.jsxParseElementAt (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4740:36)
+      at JSXParserMixin.jsxParseElement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4778:17)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4788:19)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12567:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11747:28)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12495:16)
+      at JSXParserMixin.parseExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.parseReturnStatement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13218:28)
+      at JSXParserMixin.parseStatementContent (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12874:21)
+      at JSXParserMixin.parseStatementLike (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at JSXParserMixin.parseStatementListItem (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13392:61)
+      at JSXParserMixin.parseBlockBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at JSXParserMixin.parseBlock (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13373:10)
+      at JSXParserMixin.parseFunctionBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12174:24)
+      at JSXParserMixin.parseArrowExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12149:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11759:12)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+11:33:50 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:33:54 AM [vite] hmr update /src/pages/listings/HotelsPage.jsx, /src/index.css
+11:33:54 AM [vite] Internal server error: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/listings/HotelsPage.jsx: Unexpected token, expected "}" (2516:3)
+
+  2514 |       )}
+  2515 |     </div>
+> 2516 |   );
+       |    ^
+  2517 | };
+  2518 |
+  2519 | // Date Range Calendar Component with two calendars side by side
+  Plugin: vite:react-babel
+  File: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/listings/HotelsPage.jsx:2516:3
+  2514|        )}
+  2515|      </div>
+  2516|    );
+     |     ^
+  2517|  };
+  2518|  
+      at constructor (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at JSXParserMixin.unexpected (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6644:16)
+      at JSXParserMixin.expect (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6924:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4666:10)
+      at JSXParserMixin.jsxParseElementAt (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4740:36)
+      at JSXParserMixin.jsxParseElement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4778:17)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4788:19)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12567:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11747:28)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12495:16)
+      at JSXParserMixin.parseExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.parseReturnStatement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13218:28)
+      at JSXParserMixin.parseStatementContent (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12874:21)
+      at JSXParserMixin.parseStatementLike (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at JSXParserMixin.parseStatementListItem (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13392:61)
+      at JSXParserMixin.parseBlockBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at JSXParserMixin.parseBlock (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13373:10)
+      at JSXParserMixin.parseFunctionBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12174:24)
+      at JSXParserMixin.parseArrowExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12149:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11759:12)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+11:33:56 AM [vite] hmr update /src/pages/listings/HotelsPage.jsx, /src/index.css
+11:33:59 AM [vite] hmr update /src/pages/listings/HotelsPage.jsx, /src/index.css
+11:33:59 AM [vite] Internal server error: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/listings/HotelsPage.jsx: Unexpected token, expected "}" (2520:3)
+
+  2518 |       )}
+  2519 |     </div>
+> 2520 |   );
+       |    ^
+  2521 | };
+  2522 |
+  2523 | // Date Range Calendar Component with two calendars side by side
+  Plugin: vite:react-babel
+  File: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/listings/HotelsPage.jsx:2520:3
+  2518|        )}
+  2519|      </div>
+  2520|    );
+     |     ^
+  2521|  };
+  2522|  
+      at constructor (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at JSXParserMixin.unexpected (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6644:16)
+      at JSXParserMixin.expect (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6924:12)
+      at JSXParserMixin.jsxParseExpressionContainer (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4666:10)
+      at JSXParserMixin.jsxParseElementAt (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4740:36)
+      at JSXParserMixin.jsxParseElement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4778:17)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4788:19)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12567:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11747:28)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12495:16)
+      at JSXParserMixin.parseExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.parseReturnStatement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13218:28)
+      at JSXParserMixin.parseStatementContent (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12874:21)
+      at JSXParserMixin.parseStatementLike (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12843:17)
+      at JSXParserMixin.parseStatementListItem (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12823:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13392:61)
+      at JSXParserMixin.parseBlockBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13385:10)
+      at JSXParserMixin.parseBlock (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:13373:10)
+      at JSXParserMixin.parseFunctionBody (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12174:24)
+      at JSXParserMixin.parseArrowExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12149:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11759:12)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+11:34:01 AM [vite] hmr update /src/pages/listings/HotelsPage.jsx, /src/index.css
+11:34:15 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:34:32 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:34:32 AM [vite] hmr update /src/pages/listings/HotelsPage.jsx, /src/index.css
+11:36:56 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:37:00 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:37:00 AM [vite] Internal server error: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/HomePage.jsx: Unexpected token (2676:2)
+
+  2674 | // Date Range Calendar Component with two calendars side by side
+  2675 | const DateRangeCalendar = ({ startDate, endDate, onDateSelect, onApply, onClear, onToday, minDate }) => {
+> 2676 |   const [selectingStart, setSelectingStart] = useState(!startDate);
+       |   ^
+  2677 |   const [tempStartDate, setTempStartDate] = useState(startDate || '');
+  2678 |   const [tempEndDate, setTempEndDate] = useState(endDate || '');
+  2679 |
+  Plugin: vite:react-babel
+  File: /Users/vidushi/PycharmProjects/Kayak-clone/frontend/src/pages/HomePage.jsx:2676:2
+  2674|  // Date Range Calendar Component with two calendars side by side
+  2675|  const DateRangeCalendar = ({ startDate, endDate, onDateSelect, onApply, onClear, onToday, minDate }) => {
+  2676|    const [selectingStart, setSelectingStart] = useState(!startDate);
+     |    ^
+  2677|    const [tempStartDate, setTempStartDate] = useState(startDate || '');
+  2678|    const [tempEndDate, setTempEndDate] = useState(endDate || '');
+      at constructor (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6624:19)
+      at JSXParserMixin.unexpected (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:6644:16)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11508:22)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4661:31)
+      at JSXParserMixin.jsxParseElementAt (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4740:36)
+      at JSXParserMixin.jsxParseElement (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4778:17)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4788:19)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10864:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12567:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11747:28)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOpBaseRightExpr (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11050:34)
+      at JSXParserMixin.parseExprOpRightExpr (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11045:21)
+      at JSXParserMixin.parseExprOp (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:11011:27)
+      at JSXParserMixin.parseExprOps (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10972:17)
+      at JSXParserMixin.parseMaybeConditional (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseExpression (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4661:31)
+      at JSXParserMixin.jsxParseElementAt (/Users/vidushi/PycharmProjects/Kayak-clone/frontend/node_modules/@babel/parser/lib/index.js:4740:36)
+11:37:02 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:37:11 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:37:22 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:37:28 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:37:31 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:37:43 AM [vite] hmr update /src/components/common/FlightPriceCalendar.jsx, /src/index.css
+11:38:17 AM [vite] hmr update /src/components/common/FlightPriceCalendar.jsx, /src/index.css
+11:38:17 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:47:14 AM [vite] hmr update /src/pages/listings/FlightsPage.jsx, /src/index.css
+11:47:21 AM [vite] hmr update /src/pages/listings/FlightsPage.jsx, /src/index.css
+11:47:40 AM [vite] hmr update /src/components/common/FlightPriceCalendar.jsx, /src/index.css
+11:48:10 AM [vite] hmr update /src/components/common/FlightPriceCalendar.jsx, /src/index.css
+11:48:10 AM [vite] hmr update /src/pages/listings/FlightsPage.jsx, /src/index.css
+11:59:22 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:59:27 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+11:59:46 AM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:00:11 PM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:01:33 PM [vite] hmr update /src/components/common/FlightPriceCalendar.jsx, /src/index.css
+12:01:33 PM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:01:33 PM [vite] hmr update /src/pages/listings/FlightsPage.jsx, /src/index.css
+12:01:34 PM [vite] hmr update /src/index.css
+12:01:34 PM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:01:34 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+
+🌼   daisyUI 4.12.24
+├─ ✔︎ 3 themes added		https://daisyui.com/docs/themes
+╰─ ★ Star daisyUI on GitHub	https://github.com/saadeghi/daisyui
+
+12:01:35 PM [vite] hmr update /src/components/common/FlightPriceCalendar.jsx, /src/index.css
+12:01:35 PM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:01:35 PM [vite] hmr update /src/pages/listings/FlightsPage.jsx, /src/index.css
+12:36:14 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+12:36:34 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+12:36:58 PM [vite] hmr update /src/components/agent/AgentResultsView.jsx, /src/index.css
+12:37:12 PM [vite] hmr update /src/components/agent/AgentResultsView.jsx, /src/index.css
+12:37:12 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+12:40:19 PM [vite] hmr update /src/components/agent/AgentResultsView.jsx, /src/index.css
+12:40:19 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+12:44:35 PM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:44:39 PM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:44:43 PM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:44:48 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:44:54 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:44:57 PM [vite] hmr update /src/pages/listings/CarDetailPage.jsx, /src/index.css
+12:44:57 PM [vite] hmr update /src/pages/listings/CarDetailPage.jsx, /src/index.css
+12:45:48 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:45:48 PM [vite] hmr update /src/pages/HomePage.jsx, /src/index.css
+12:45:48 PM [vite] hmr update /src/pages/listings/CarDetailPage.jsx, /src/index.css
+12:49:46 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:49:54 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:50:34 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:50:50 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:51:00 PM [vite] hmr update /src/pages/listings/CarDetailPage.jsx, /src/index.css
+12:51:02 PM [vite] hmr update /src/pages/listings/CarDetailPage.jsx, /src/index.css
+12:51:29 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+12:51:50 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+12:52:27 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:52:27 PM [vite] hmr update /src/pages/listings/CarDetailPage.jsx, /src/index.css
+12:52:27 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+12:56:14 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:56:16 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:56:20 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:56:46 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+12:56:51 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:00:03 PM [vite] hmr update /src/index.css, /src/pages/bookings/BookingDetailPage.jsx, /src/pages/payments/PaymentsPage.jsx, /src/pages/bookings/BookingsPage.jsx
+1:00:16 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+1:00:23 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+1:00:29 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+1:00:43 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+1:01:08 PM [vite] hmr update /src/index.css, /src/pages/bookings/BookingDetailPage.jsx, /src/pages/payments/PaymentsPage.jsx, /src/pages/bookings/BookingsPage.jsx
+1:01:08 PM [vite] hmr update /src/pages/bookings/BookingsPage.jsx, /src/index.css
+1:06:25 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:07:05 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:07:48 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:07:56 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:12:28 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:12:36 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:12:44 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:12:47 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:12:57 PM [vite] hmr update /src/pages/listings/CarsPage.jsx, /src/index.css
+1:21:02 PM [vite] hmr update /src/index.css, /src/pages/owner/OwnerDashboard.jsx, /src/pages/owner/OwnerHotelsPage.jsx, /src/pages/analytics/AnalyticsPage.jsx, /src/pages/owner/AddHotelPage.jsx, /src/pages/owner/OwnerCarsPage.jsx, /src/pages/owner/AddCarPage.jsx
+1:22:18 PM [vite] hmr update /src/App.jsx, /src/index.css
+1:22:21 PM [vite] hmr update /src/App.jsx, /src/index.css
+1:22:25 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:22:32 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:23:12 PM [vite] hmr update /src/App.jsx, /src/index.css
+1:23:12 PM [vite] hmr update /src/pages/owner/OwnerBookingsPage.jsx, /src/index.css
+1:23:12 PM [vite] hmr update /src/index.css, /src/pages/owner/OwnerDashboard.jsx, /src/pages/owner/OwnerHotelsPage.jsx, /src/pages/analytics/AnalyticsPage.jsx, /src/pages/owner/AddHotelPage.jsx, /src/pages/owner/OwnerCarsPage.jsx, /src/pages/owner/AddCarPage.jsx, /src/pages/owner/OwnerBookingsPage.jsx
+1:23:12 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:26:53 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:27:01 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:27:16 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:27:34 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:27:51 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:29:27 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:29:48 PM [vite] hmr update /src/pages/owner/OwnerBookingsPage.jsx, /src/index.css
+1:29:49 PM [vite] hmr update /src/pages/owner/OwnerBookingsPage.jsx, /src/index.css
+1:30:00 PM [vite] hmr update /src/pages/owner/OwnerBookingsPage.jsx, /src/index.css
+1:30:12 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:30:30 PM [vite] hmr update /src/pages/owner/OwnerBookingsPage.jsx, /src/index.css
+1:30:30 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:31:32 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:31:42 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:31:54 PM [vite] hmr update /src/pages/owner/OwnerDashboard.jsx, /src/index.css
+1:36:29 PM [vite] hmr update /src/pages/RegisterPage.jsx, /src/index.css
+1:37:08 PM [vite] hmr update /src/pages/RegisterPage.jsx, /src/index.css
+1:38:34 PM [vite] hmr update /src/index.css, /src/pages/users/UserDetailPage.jsx, /src/pages/users/UsersPage.jsx, /src/pages/bookings/BookingsPage.jsx, /src/pages/ProfilePage.jsx
+1:38:51 PM [vite] hmr update /src/pages/ProfilePage.jsx, /src/index.css
+1:40:17 PM [vite] hmr update /src/pages/ProfilePage.jsx, /src/index.css
+1:40:42 PM [vite] hmr update /src/pages/ProfilePage.jsx, /src/index.css
+1:41:57 PM [vite] hmr update /src/pages/ProfilePage.jsx, /src/index.css
+1:42:21 PM [vite] hmr update /src/pages/users/UsersPage.jsx, /src/index.css
+1:42:28 PM [vite] hmr update /src/pages/users/UsersPage.jsx, /src/index.css
+1:42:44 PM [vite] hmr update /src/pages/users/UsersPage.jsx, /src/index.css
+1:43:33 PM [vite] hmr update /src/pages/users/UsersPage.jsx, /src/index.css
+1:43:33 PM [vite] hmr update /src/pages/ProfilePage.jsx, /src/index.css

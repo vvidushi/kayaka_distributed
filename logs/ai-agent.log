@@ -1,0 +1,13 @@
+INFO:     Will watch for changes in these directories: ['/Users/vidushi/PycharmProjects/Kayak-clone/ai-agent']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [13252] using WatchFiles
+INFO:     Started server process [13260]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Connected to Redis cache for AI agent
+Concierge AI Service starting up...
+Initializing deal cache...
+Loaded 20 deals into cache
+INFO:     127.0.0.1:52117 - "GET /health HTTP/1.1" 200 OK
+[scheduled] No deals loaded from feed; retaining current cache
+INFO:     127.0.0.1:55553 - "POST /api/v1/concierge/sessions HTTP/1.1" 200 OK

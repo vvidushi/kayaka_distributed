@@ -1,0 +1,28 @@
+2025-12-08 12:19:12,667 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-12-08 12:19:12,683 INFO o.a.j.JMeter: Loading user properties from: /Users/hiruzen/Programming/Projects/DATA-236-Projects/Lab2/tools/jmeter/bin/user.properties
+2025-12-08 12:19:12,683 INFO o.a.j.JMeter: Loading system properties from: /Users/hiruzen/Programming/Projects/DATA-236-Projects/Lab2/tools/jmeter/bin/system.properties
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: Version 5.6.3
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: java.version=25
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: os.arch=aarch64
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: os.version=26.1
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: java.awt.headless=true
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-12-08 12:19:12,687 INFO o.a.j.JMeter: Available Processors =8
+2025-12-08 12:19:12,700 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-12-08 12:19:12,700 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-12-08 12:19:12,700 INFO o.a.j.JMeter: JMeterHome=/Users/hiruzen/Programming/Projects/DATA-236-Projects/Lab2/tools/jmeter
+2025-12-08 12:19:12,700 INFO o.a.j.JMeter: user.dir  =/Users/hiruzen/Programming/Projects/DATA-236-Projects/Kayak-Project/jmeter
+2025-12-08 12:19:12,700 INFO o.a.j.JMeter: PWD       =/Users/hiruzen/Programming/Projects/DATA-236-Projects/Kayak-Project/jmeter
+2025-12-08 12:19:12,704 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Shravankumars-MacBook-Air.local FullName: localhost
+2025-12-08 12:19:12,712 ERROR o.a.j.JMeter: An error occurred: 
+org.apache.jmeter.report.config.ConfigurationException: The file /Users/hiruzen/Programming/Projects/DATA-236-Projects/Kayak-Project/jmeter/jmeter/kayak_cache_performance.jmx doesn't exist or can't be opened
+	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:950) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.JMeter.startNonGui(JMeter.java:940) ~[ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.JMeter.start(JMeter.java:508) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[?:?]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:259) [ApacheJMeter.jar:5.6.3]

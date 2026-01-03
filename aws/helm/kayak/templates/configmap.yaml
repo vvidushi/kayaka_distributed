@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kayak-backend-config
+  namespace: {{ .Values.global.project }}-{{ .Values.global.environment }}
+  labels:
+    {{- include "kayak.labels" . | nindent 4 }}
+data:
+  {{- range $key, $value := .Values.configMaps.backend }}
+  {{ $key }}: {{ $value | quote }}
+  {{- end }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kayak-agent-config
+  namespace: {{ .Values.global.project }}-{{ .Values.global.environment }}
+  labels:
+    {{- include "kayak.labels" . | nindent 4 }}
+data:
+  {{- range $key, $value := .Values.configMaps.agent }}
+  {{ $key }}: {{ $value | quote }}
+  {{- end }}

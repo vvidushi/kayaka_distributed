@@ -1,0 +1,1726 @@
+
+> kayak-backend@1.0.0 dev
+> nodemon src/server.js
+
+[33m[nodemon] 3.1.11[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 11:26:11 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 11:26:11 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 11:26:11 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 11:26:11 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 11:26:11 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 11:26:11 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 11:26:11 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[0mGET / [33m404[0m 2.321 ms - 54[0m
+2025-12-08 11:31:47 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 709.297 ms - -[0m
+2025-12-08 11:31:48 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/payments [36m304[0m 821.312 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 98.067 ms - -[0m
+[0mGET /api/v1/payments [36m304[0m 171.921 ms - -[0m
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 639.302 ms - -[0m
+2025-12-08 11:31:48 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 91.080 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 86.588 ms - -[0m
+[0mGET /api/v1/payments [36m304[0m 179.766 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 89.944 ms - -[0m
+[0mGET /api/v1/payments [36m304[0m 192.159 ms - -[0m
+2025-12-08 11:32:12 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 143.886 ms - -[0m
+2025-12-08 11:32:13 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 91.958 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 148.363 ms - -[0m
+[0mGET /api/v1/payments [36m304[0m 180.000 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 142.770 ms - -[0m
+[0mGET /api/v1/payments [36m304[0m 203.821 ms - -[0m
+2025-12-08 11:32:28 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 11:32:28 [[32minfo[39m]: MongoDB connected successfully
+[0mGET /api/v1/listings/cars/locations?q=new&limit=10 [32m200[0m 1121.209 ms - 47[0m
+[0mGET /api/v1/listings/cars/locations?q=ne&limit=10 [32m200[0m 1689.286 ms - 63[0m
+[0mGET /api/v1/listings/cars/locations?q=ne&limit=10 [36m304[0m 82.742 ms - -[0m
+[0mGET /api/v1/listings/cars/locations?q=me&limit=10 [32m200[0m 83.339 ms - 24[0m
+[0mGET /api/v1/listings/cars/locations?q=mex&limit=10 [32m200[0m 90.192 ms - 12[0m
+[0mGET /api/v1/listings/cars/locations?q=me&limit=10 [36m304[0m 83.330 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=ne&limit=10 [36m304[0m 557.417 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 182.045 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+&limit=10 [36m304[0m 167.174 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+y&limit=10 [36m304[0m 222.989 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yo&limit=10 [36m304[0m 170.464 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yor&limit=10 [36m304[0m 177.048 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=10 [36m304[0m 173.115 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yor&limit=10 [36m304[0m 171.579 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yo&limit=10 [36m304[0m 189.442 ms - -[0m
+2025-12-08 11:34:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:34:48 [[34mdebug[39m]: Found 12 flight locations for query: new
+2025-12-08 11:34:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=new&limit=12 [36m304[0m 116.034 ms - -[0m
+2025-12-08 11:34:52 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:34:53 [[34mdebug[39m]: Found 0 flight locations for query: newyork
+2025-12-08 11:34:53 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=newyork&limit=12 [36m304[0m 1235.394 ms - -[0m
+2025-12-08 11:34:54 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:34:55 [[34mdebug[39m]: Found 12 flight locations for query: new
+2025-12-08 11:34:55 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=new&limit=12 [36m304[0m 92.130 ms - -[0m
+2025-12-08 11:34:55 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:34:55 [[34mdebug[39m]: Found 12 flight locations for query: new
+2025-12-08 11:34:55 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=new&limit=12 [36m304[0m 181.690 ms - -[0m
+2025-12-08 11:34:58 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:34:58 [[34mdebug[39m]: Found 7 flight locations for query: sf
+2025-12-08 11:34:58 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sf&limit=12 [36m304[0m 93.190 ms - -[0m
+2025-12-08 11:34:58 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:34:59 [[34mdebug[39m]: Found 1 flight locations for query: sfo
+2025-12-08 11:34:59 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sfo&limit=12 [36m304[0m 87.521 ms - -[0m
+2025-12-08 11:35:04 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:35:04 [[34mdebug[39m]: Found 1 flight locations for query: lax
+2025-12-08 11:35:04 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=lax&limit=12 [36m304[0m 92.123 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SFO+-+San+Francisco+(San+Francisco+International+Airport)&to=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&startDate=2025-12-01&endDate=2026-01-31 [36m304[0m 86.015 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=ne&limit=10 [36m304[0m 180.351 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 314.322 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+&limit=10 [36m304[0m 168.969 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+y&limit=10 [36m304[0m 232.194 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yo&limit=10 [36m304[0m 176.183 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yor&limit=10 [36m304[0m 177.122 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=10 [36m304[0m 175.250 ms - -[0m
+[0mGET /api/v1/listings/hotels/prices-by-date?city=new+york&startDate=2025-12-01&endDate=2026-01-31 [32m200[0m 433.815 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=10 [36m304[0m 326.702 ms - -[0m
+2025-12-08 11:36:33 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:36:33 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:36:33 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/amenities [32m200[0m 83.406 ms - 179[0m
+[0mGET /api/v1/listings/hotels/property-types [32m200[0m 83.340 ms - 74[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 90.724 ms - -[0m
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 166.254 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [32m200[0m 259.484 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 180.334 ms - -[0m
+2025-12-08 11:36:34 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [32m200[0m 718.707 ms - -[0m
+2025-12-08 11:36:34 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:36:34 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:36:34 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+2025-12-08 11:36:34 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 97.345 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=18 [32m200[0m 192.540 ms - -[0m
+2025-12-08 11:36:46 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:36:46 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:36:46 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 86.854 ms - -[0m
+2025-12-08 11:36:46 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 87.328 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 90.233 ms - -[0m
+2025-12-08 11:36:46 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:36:46 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:36:46 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 102.777 ms - -[0m
+2025-12-08 11:36:46 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 102.524 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 100.860 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=18 [36m304[0m 167.991 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 718.160 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 205.936 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=18 [36m304[0m 192.570 ms - -[0m
+2025-12-08 11:37:37 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:37:37 [[34mdebug[39m]: Found 7 flight locations for query: sf
+2025-12-08 11:37:37 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sf&limit=12 [36m304[0m 297.899 ms - -[0m
+2025-12-08 11:37:37 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:37:37 [[34mdebug[39m]: Found 1 flight locations for query: sfo
+2025-12-08 11:37:37 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sfo&limit=12 [36m304[0m 90.594 ms - -[0m
+2025-12-08 11:37:40 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:37:40 [[34mdebug[39m]: Found 12 flight locations for query: la
+2025-12-08 11:37:40 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=la&limit=12 [36m304[0m 121.627 ms - -[0m
+2025-12-08 11:37:40 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:37:40 [[34mdebug[39m]: Found 1 flight locations for query: lax
+2025-12-08 11:37:40 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=lax&limit=12 [36m304[0m 86.481 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SFO+-+San+Francisco+(San+Francisco+International+Airport)&to=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&startDate=2026-01-01&endDate=2026-02-28 [36m304[0m 88.176 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SFO+-+San+Francisco+(San+Francisco+International+Airport)&to=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&startDate=2026-02-01&endDate=2026-03-31 [32m200[0m 87.779 ms - 2[0m
+[0mGET /api/v1/listings/hotels/locations?q=ne&limit=10 [36m304[0m 200.231 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 181.835 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+&limit=10 [36m304[0m 164.066 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+y&limit=10 [36m304[0m 186.758 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yo&limit=10 [36m304[0m 196.122 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yor&limit=10 [36m304[0m 180.612 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=10 [36m304[0m 175.840 ms - -[0m
+[0mGET /api/v1/listings/hotels/prices-by-date?city=new+york&startDate=2026-01-01&endDate=2026-02-28 [32m200[0m 256.835 ms - -[0m
+[0mGET /api/v1/listings/hotels/prices-by-date?city=new+york&startDate=2026-02-01&endDate=2026-03-31 [32m200[0m 255.030 ms - -[0m
+[0mGET /api/v1/listings/hotels/prices-by-date?city=new+york&startDate=2026-03-01&endDate=2026-04-30 [32m200[0m 270.816 ms - -[0m
+[0mGET /api/v1/listings/hotels/prices-by-date?city=new+york&startDate=2026-04-01&endDate=2026-05-31 [32m200[0m 255.890 ms - -[0m
+[0mGET /api/v1/listings/hotels/prices-by-date?city=new+york&startDate=2026-05-01&endDate=2026-06-30 [32m200[0m 258.847 ms - -[0m
+2025-12-08 11:39:25 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 632.872 ms - -[0m
+2025-12-08 11:39:25 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 88.665 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=ne&limit=10 [36m304[0m 179.337 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 172.903 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+&limit=10 [36m304[0m 173.468 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+y&limit=10 [36m304[0m 173.080 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yo&limit=10 [36m304[0m 181.329 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yor&limit=10 [36m304[0m 184.501 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=10 [36m304[0m 174.559 ms - -[0m
+2025-12-08 11:39:46 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:39:46 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:39:46 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 84.975 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 94.502 ms - -[0m
+2025-12-08 11:39:46 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 99.611 ms - -[0m
+2025-12-08 11:39:46 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:39:46 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:39:46 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 95.995 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 204.763 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 109.287 ms - -[0m
+2025-12-08 11:39:46 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 112.270 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 475.763 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=18 [36m304[0m 177.606 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=18 [36m304[0m 194.060 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 11:40:04 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 11:40:04 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 11:40:04 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 11:40:04 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 11:40:04 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 11:40:04 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 11:40:04 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 11:40:36 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 11:40:36 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 11:40:36 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 11:40:36 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 11:40:36 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 11:40:36 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 11:40:36 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 11:40:44 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:40:45 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 11:40:45 [[34mdebug[39m]: Found 12 flight locations for query: new
+2025-12-08 11:40:45 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=new&limit=12 [36m304[0m 1425.360 ms - -[0m
+2025-12-08 11:40:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:40:48 [[34mdebug[39m]: Found 12 flight locations for query: s
+2025-12-08 11:40:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=s&limit=12 [36m304[0m 90.852 ms - -[0m
+2025-12-08 11:40:48 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:40:48 [[34mdebug[39m]: Found 1 flight locations for query: sfo
+2025-12-08 11:40:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sfo&limit=12 [36m304[0m 100.219 ms - -[0m
+2025-12-08 11:40:51 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:40:51 [[34mdebug[39m]: Found 1 flight locations for query: lax
+2025-12-08 11:40:51 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=lax&limit=12 [36m304[0m 93.759 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SFO+-+San+Francisco+(San+Francisco+International+Airport)&to=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&startDate=2025-12-01&endDate=2026-01-31 [36m304[0m 83.604 ms - -[0m
+2025-12-08 11:40:56 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:40:56 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:40:56 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:40:57 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?page=1&pageSize=10&sortBy=price&sortOrder=asc&from=SFO&to=LAX&departDate=2025-12-08 [36m304[0m 754.361 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08 [36m304[0m 748.241 ms - -[0m
+2025-12-08 11:40:57 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:40:57 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:40:57 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:40:57 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?page=1&pageSize=10&sortBy=price&sortOrder=asc&from=SFO&to=LAX&departDate=2025-12-08 [36m304[0m 163.123 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08 [36m304[0m 163.582 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08 [36m304[0m 84.896 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SFO&to=LAX&startDate=2025-12-01&endDate=2026-01-31 [36m304[0m 4230.800 ms - -[0m
+2025-12-08 11:41:08 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:41:08 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-09"}
+2025-12-08 11:41:08 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:41:08 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?page=1&pageSize=10&sortBy=price&sortOrder=asc&from=SFO&to=LAX&departDate=2025-12-09 [32m200[0m 85.545 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-09 [32m200[0m 89.739 ms - 93[0m
+2025-12-08 11:43:55 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:43:55 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-18"}
+2025-12-08 11:43:55 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-18 [32m200[0m 89.179 ms - 147[0m
+2025-12-08 11:43:55 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?page=1&pageSize=10&sortBy=price&sortOrder=asc&from=SFO&to=LAX&departDate=2025-12-18 [32m200[0m 101.386 ms - -[0m
+2025-12-08 11:44:04 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:44:04 [[34mdebug[39m]: Found 12 flight locations for query: new
+2025-12-08 11:44:04 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=new&limit=12 [36m304[0m 91.584 ms - -[0m
+2025-12-08 11:44:06 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:44:06 [[34mdebug[39m]: Found 12 flight locations for query: new
+2025-12-08 11:44:06 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=new&limit=12 [36m304[0m 132.302 ms - -[0m
+2025-12-08 11:44:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:44:07 [[34mdebug[39m]: Found 4 flight locations for query: new york
+2025-12-08 11:44:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=new+york&limit=12 [32m200[0m 91.360 ms - 517[0m
+2025-12-08 11:45:23 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:45:23 [[34mdebug[39m]: Found 7 flight locations for query: sf
+2025-12-08 11:45:23 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sf&limit=12 [36m304[0m 99.532 ms - -[0m
+2025-12-08 11:45:24 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:45:24 [[34mdebug[39m]: Found 1 flight locations for query: sfo
+2025-12-08 11:45:24 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sfo&limit=12 [36m304[0m 89.119 ms - -[0m
+2025-12-08 11:45:27 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:45:27 [[34mdebug[39m]: Found 1 flight locations for query: lax
+2025-12-08 11:45:27 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=lax&limit=12 [36m304[0m 108.963 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&to=SFO+-+San+Francisco+(San+Francisco+International+Airport)&startDate=2025-12-01&endDate=2026-01-31 [36m304[0m 91.555 ms - -[0m
+2025-12-08 11:46:43 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+2025-12-08 11:46:43 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 822.753 ms - -[0m
+2025-12-08 11:46:44 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 89.632 ms - -[0m
+2025-12-08 11:49:48 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:49:48 [[34mdebug[39m]: Found 12 flight locations for query: n
+2025-12-08 11:49:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=n&limit=12 [36m304[0m 85.799 ms - -[0m
+2025-12-08 11:49:50 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:49:50 [[34mdebug[39m]: Found 1 flight locations for query: sfo
+2025-12-08 11:49:50 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sfo&limit=12 [36m304[0m 90.126 ms - -[0m
+2025-12-08 11:49:53 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:49:53 [[34mdebug[39m]: Found 12 flight locations for query: la
+2025-12-08 11:49:53 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=la&limit=12 [36m304[0m 89.280 ms - -[0m
+2025-12-08 11:49:54 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:49:54 [[34mdebug[39m]: Found 1 flight locations for query: lax
+2025-12-08 11:49:54 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=lax&limit=12 [36m304[0m 88.010 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SFO+-+San+Francisco+(San+Francisco+International+Airport)&to=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&startDate=2025-12-01&endDate=2026-01-31 [36m304[0m 81.707 ms - -[0m
+2025-12-08 11:50:17 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:50:17 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:50:17 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:50:17 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:50:17 [[34mdebug[39m]: searchFlights query filter: {"from":"LAX","to":"SFO","departDate":"2025-12-15"}
+2025-12-08 11:50:17 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:50:17 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 86.171 ms - -[0m
+2025-12-08 11:50:17 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:50:17 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:50:17 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:50:17 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 81.435 ms - -[0m
+2025-12-08 11:50:17 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=LAX&to=SFO&departDate=2025-12-15&nonstop=any&pageSize=100 [36m304[0m 659.801 ms - -[0m
+2025-12-08 11:50:17 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:50:17 [[34mdebug[39m]: searchFlights query filter: {"from":"LAX","to":"SFO","departDate":"2025-12-15"}
+2025-12-08 11:50:17 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-15 [36m304[0m 729.862 ms - -[0m
+2025-12-08 11:50:17 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=LAX&to=SFO&departDate=2025-12-15&nonstop=any&pageSize=100 [36m304[0m 87.719 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-15 [36m304[0m 158.330 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-15 [36m304[0m 163.840 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SFO&to=LAX&startDate=2025-12-01&endDate=2026-01-31 [36m304[0m 2204.237 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=ne&limit=10 [36m304[0m 206.345 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 461.437 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 202.646 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 163.664 ms - -[0m
+2025-12-08 11:52:32 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:52:32 [[34mdebug[39m]: Found 12 flight locations for query: ne
+2025-12-08 11:52:32 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=ne&limit=12 [32m200[0m 92.424 ms - -[0m
+2025-12-08 11:52:36 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:52:36 [[34mdebug[39m]: Found 4 flight locations for query: new york
+2025-12-08 11:52:36 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=new+york&limit=12 [36m304[0m 174.422 ms - -[0m
+2025-12-08 11:52:41 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:52:42 [[34mdebug[39m]: Found 0 flight locations for query: JRA - New York (West 30th St. Heliport)
+2025-12-08 11:52:42 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=JRA+-+New+York+(West+30th+St.+Heliport)&limit=12 [32m200[0m 1167.258 ms - 12[0m
+2025-12-08 11:52:42 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:52:44 [[34mdebug[39m]: Found 0 flight locations for query: JRA - New York (West 30th St. Heliport)
+2025-12-08 11:52:44 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=JRA+-+New+York+(West+30th+St.+Heliport)&limit=12 [36m304[0m 1506.279 ms - -[0m
+2025-12-08 11:52:45 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:52:45 [[34mdebug[39m]: Found 1 flight locations for query: sfo
+2025-12-08 11:52:45 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sfo&limit=12 [36m304[0m 107.965 ms - -[0m
+2025-12-08 11:52:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:52:47 [[34mdebug[39m]: Found 1 flight locations for query: lax
+2025-12-08 11:52:47 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=lax&limit=12 [36m304[0m 106.436 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=sfo&to=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&startDate=2025-12-01&endDate=2026-01-31 [32m200[0m 103.864 ms - 2[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&to=sfo&startDate=2025-12-01&endDate=2026-01-31 [32m200[0m 78.762 ms - 2[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=LAX+-+Los+Angeles+(Los+Angeles+International+Airport)&to=SFO+-+San+Francisco+(San+Francisco+International+Airport)&startDate=2025-12-01&endDate=2026-01-31 [36m304[0m 223.325 ms - -[0m
+2025-12-08 11:53:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:53:07 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:53:07 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:53:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:53:07 [[34mdebug[39m]: searchFlights query filter: {"from":"LAX","to":"SFO","departDate":"2025-12-17"}
+2025-12-08 11:53:07 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:53:07 [[34mdebug[39m]: Cache disabled, skipping set
+2025-12-08 11:53:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 105.362 ms - -[0m
+2025-12-08 11:53:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:53:07 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:53:07 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/search?from=LAX&to=SFO&departDate=2025-12-17&nonstop=any&pageSize=100 [32m200[0m 99.032 ms - -[0m
+2025-12-08 11:53:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:53:07 [[34mdebug[39m]: searchFlights query filter: {"from":"LAX","to":"SFO","departDate":"2025-12-17"}
+2025-12-08 11:53:07 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [32m200[0m 172.811 ms - 88[0m
+2025-12-08 11:53:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 88.314 ms - -[0m
+2025-12-08 11:53:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=LAX&to=SFO&departDate=2025-12-17&nonstop=any&pageSize=100 [36m304[0m 86.220 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [36m304[0m 156.624 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [36m304[0m 156.653 ms - -[0m
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"LAX","to":"SFO","departDate":"2025-12-17"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [0m-[0m - ms - -[0m
+[0mGET /api/v1/listings/flights/search?from=LAX&to=SFO&departDate=2025-12-17&nonstop=any&pageSize=100 [0m-[0m - ms - -[0m
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [0m-[0m - ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [0m-[0m - ms - -[0m
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [0m-[0m - ms - -[0m
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [0m-[0m - ms - -[0m
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping set
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping set
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"LAX","to":"SFO","departDate":"2025-12-17"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping set
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [32m200[0m 113.722 ms - -[0m
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/search?from=LAX&to=SFO&departDate=2025-12-17&nonstop=any&pageSize=100 [0m-[0m - ms - -[0m
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [0m-[0m - ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [0m-[0m - ms - -[0m
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"LAX","to":"SFO","departDate":"2025-12-17"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping set
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping set
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping set
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [32m200[0m 138.916 ms - -[0m
+[0mGET /api/v1/listings/flights/search?from=LAX&to=SFO&departDate=2025-12-17&nonstop=any&pageSize=100 [32m200[0m 140.778 ms - -[0m
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"SFO","to":"LAX","departDate":"2025-12-08"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 11:55:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights query filter: {"from":"LAX","to":"SFO","departDate":"2025-12-17"}
+2025-12-08 11:55:26 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [32m200[0m 223.043 ms - 88[0m
+2025-12-08 11:55:27 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SFO&to=LAX&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 82.966 ms - -[0m
+2025-12-08 11:55:27 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=LAX&to=SFO&departDate=2025-12-17&nonstop=any&pageSize=100 [36m304[0m 157.846 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [36m304[0m 200.729 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SFO&to=LAX&departDate=2025-12-08&returnDate=2025-12-17 [36m304[0m 162.892 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=be&limit=10 [32m200[0m 165.738 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=bea&limit=10 [32m200[0m 162.535 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=beau&limit=10 [32m200[0m 165.856 ms - 872[0m
+[0mGET /api/v1/listings/hotels/locations?q=beaut&limit=10 [32m200[0m 163.344 ms - 872[0m
+[0mGET /api/v1/listings/hotels/locations?q=beauti&limit=10 [32m200[0m 210.159 ms - 872[0m
+[0mGET /api/v1/listings/hotels/locations?q=beautif&limit=10 [32m200[0m 163.333 ms - 872[0m
+[0mGET /api/v1/listings/hotels/locations?q=beautifu&limit=10 [32m200[0m 162.844 ms - 872[0m
+[0mGET /api/v1/listings/hotels/locations?q=beautif&limit=10 [36m304[0m 161.778 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=beauti&limit=10 [36m304[0m 161.528 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=beaut&limit=10 [36m304[0m 164.709 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=beau&limit=10 [36m304[0m 161.848 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=bea&limit=10 [36m304[0m 160.603 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=be&limit=10 [36m304[0m 162.093 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Be&limit=10 [32m200[0m 174.363 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Bea&limit=10 [32m200[0m 165.608 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beat&limit=10 [32m200[0m 166.844 ms - 184[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beati&limit=10 [32m200[0m 165.387 ms - 184[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatif&limit=10 [32m200[0m 165.661 ms - 184[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatifu&limit=10 [32m200[0m 166.186 ms - 184[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatiful&limit=10 [32m200[0m 162.694 ms - 184[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatiful+&limit=10 [32m200[0m 162.999 ms - 184[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatiful+A&limit=10 [32m200[0m 166.944 ms - 12[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatiful+Ap&limit=10 [32m200[0m 162.448 ms - 12[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatiful+Apa&limit=10 [32m200[0m 161.617 ms - 12[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatiful+Apar&limit=10 [32m200[0m 163.424 ms - 12[0m
+2025-12-08 11:55:48 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:48 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"B","11":"e","12":"a","13":"t","14":"i","15":"f","16":"u","17":"l","18":" ","19":"A","20":"p","21":"a","22":"r","23":"/","24":"i","25":"\"","26":"}"}
+2025-12-08 11:55:48 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 82.009 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 81.087 ms - -[0m
+2025-12-08 11:55:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=Beatiful+Apar [32m200[0m 85.386 ms - 117[0m
+2025-12-08 11:55:48 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:48 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"B","11":"e","12":"a","13":"t","14":"i","15":"f","16":"u","17":"l","18":" ","19":"A","20":"p","21":"a","22":"r","23":"/","24":"i","25":"\"","26":"}"}
+2025-12-08 11:55:48 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 79.355 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 81.717 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 160.326 ms - -[0m
+2025-12-08 11:55:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=Beatiful+Apar [36m304[0m 82.730 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 171.932 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beatiful+Apar&limit=18 [32m200[0m 166.906 ms - 12[0m
+[0mGET /api/v1/listings/hotels/locations?q=B+Apar&limit=18 [32m200[0m 159.529 ms - 12[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beaut+Apar&limit=18 [32m200[0m 161.705 ms - 12[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beautif+Apar&limit=18 [32m200[0m 161.278 ms - 12[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beautifu+Apar&limit=18 [32m200[0m 163.408 ms - 12[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beautiful+Apar&limit=18 [32m200[0m 161.624 ms - 882[0m
+2025-12-08 11:55:57 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:55:57 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"S","11":"a","12":"n","13":" ","14":"J","15":"o","16":"s","17":"e","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:55:57 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+2025-12-08 11:55:58 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=San+Jose [32m200[0m 95.026 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Beautiful+Apartments,+San+Jose&limit=18 [32m200[0m 169.549 ms - 12[0m
+2025-12-08 11:58:12 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:58:13 [[34mdebug[39m]: Found 12 flight locations for query: ne
+2025-12-08 11:58:13 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=ne&limit=12 [36m304[0m 143.662 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=ne&limit=10 [36m304[0m 452.341 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 372.949 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 182.423 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+&limit=10 [36m304[0m 214.232 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+y&limit=10 [36m304[0m 176.330 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yo&limit=10 [36m304[0m 194.321 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+yor&limit=10 [36m304[0m 163.776 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=10 [36m304[0m 246.818 ms - -[0m
+2025-12-08 11:58:45 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:58:45 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:58:45 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 312.231 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 321.191 ms - -[0m
+2025-12-08 11:58:45 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 319.077 ms - -[0m
+2025-12-08 11:58:45 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:58:45 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:58:45 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 472.476 ms - -[0m
+2025-12-08 11:58:45 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 155.485 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 157.200 ms - -[0m
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 164.511 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=18 [36m304[0m 274.139 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 257.156 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=18 [36m304[0m 376.293 ms - -[0m
+2025-12-08 11:58:54 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:58:54 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:58:54 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 82.901 ms - -[0m
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 82.103 ms - -[0m
+2025-12-08 11:58:54 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 85.359 ms - -[0m
+2025-12-08 11:58:54 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 11:58:54 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"n","11":"e","12":"w","13":" ","14":"y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 11:58:54 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 154.879 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 232.984 ms - -[0m
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 152.302 ms - -[0m
+2025-12-08 11:58:54 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=new+york [36m304[0m 152.427 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 170.382 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new+york&limit=18 [36m304[0m 174.904 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 254.068 ms - -[0m
+2025-12-08 12:01:18 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:01:18 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"N","11":"e","12":"w","13":" ","14":"Y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 12:01:18 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+2025-12-08 12:01:18 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 129.595 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 136.937 ms - -[0m
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=New+York [32m200[0m 128.036 ms - -[0m
+2025-12-08 12:01:18 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:01:18 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"N","11":"e","12":"w","13":" ","14":"Y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 12:01:18 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 212.549 ms - -[0m
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 89.009 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 88.839 ms - -[0m
+2025-12-08 12:01:18 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=New+York [36m304[0m 87.477 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 177.363 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=New+York&limit=18 [32m200[0m 166.634 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 12:01:35 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 12:01:35 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 12:01:35 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 12:01:35 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 12:01:35 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 12:01:35 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 12:01:35 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 12:31:18 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:18 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:19 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 12:31:19 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 12:31:20 [[34mdebug[39m]: Found 1 flight locations for query: sjc
+2025-12-08 12:31:20 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sjc&limit=12 [32m200[0m 1722.578 ms - 176[0m
+2025-12-08 12:31:20 [[34mdebug[39m]: Found 2 flight locations for query: sj
+2025-12-08 12:31:20 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sj&limit=12 [32m200[0m 2587.371 ms - 315[0m
+2025-12-08 12:31:26 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:26 [[34mdebug[39m]: Found 12 flight locations for query: J
+2025-12-08 12:31:26 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=J&limit=12 [32m200[0m 93.573 ms - -[0m
+2025-12-08 12:31:27 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:27 [[34mdebug[39m]: Found 1 flight locations for query: JF
+2025-12-08 12:31:27 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=JF&limit=12 [32m200[0m 90.967 ms - 154[0m
+2025-12-08 12:31:28 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:28 [[34mdebug[39m]: Found 1 flight locations for query: JFK
+2025-12-08 12:31:28 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=JFK&limit=12 [32m200[0m 90.166 ms - 154[0m
+2025-12-08 12:31:31 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:31 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-08"}
+2025-12-08 12:31:31 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:31:31 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:31 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-15"}
+2025-12-08 12:31:31 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:31:31 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-08&nonstop=any&pageSize=100 [32m200[0m 83.137 ms - 565[0m
+2025-12-08 12:31:31 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:31 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-08"}
+2025-12-08 12:31:31 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-08&returnDate=2025-12-15 [32m200[0m 237.493 ms - 15[0m
+2025-12-08 12:31:31 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 168.159 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-08&returnDate=2025-12-15 [36m304[0m 156.590 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-08&returnDate=2025-12-15 [36m304[0m 173.998 ms - -[0m
+2025-12-08 12:31:31 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-15&nonstop=any&pageSize=100 [32m200[0m 617.815 ms - 78[0m
+2025-12-08 12:31:31 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:31 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-15"}
+2025-12-08 12:31:31 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:31:31 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-15&nonstop=any&pageSize=100 [36m304[0m 84.428 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SJC&to=JFK&startDate=2025-12-01&endDate=2026-01-31 [32m200[0m 84.593 ms - 223[0m
+2025-12-08 12:31:43 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:43 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-11"}
+2025-12-08 12:31:43 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:31:43 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:43 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-15"}
+2025-12-08 12:31:43 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:31:43 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-11&nonstop=any&pageSize=100 [32m200[0m 86.068 ms - 571[0m
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-11&returnDate=2025-12-15 [32m200[0m 160.837 ms - 15[0m
+2025-12-08 12:31:44 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-15&nonstop=any&pageSize=100 [36m304[0m 594.768 ms - -[0m
+2025-12-08 12:31:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:47 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-11"}
+2025-12-08 12:31:47 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:31:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:47 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-15"}
+2025-12-08 12:31:47 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:31:47 [[34mdebug[39m]: Cache disabled, skipping set
+2025-12-08 12:31:47 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-15&nonstop=any&pageSize=100 [32m200[0m 85.219 ms - 78[0m
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-11&nonstop=any&pageSize=100 [32m200[0m 84.169 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=JFK&to=SJC&departDate=2025-12-11&returnDate=2025-12-15 [32m200[0m 163.808 ms - 15[0m
+2025-12-08 12:31:52 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:52 [[34mdebug[39m]: Found 12 flight locations for query: j
+2025-12-08 12:31:52 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=j&limit=12 [32m200[0m 85.978 ms - -[0m
+2025-12-08 12:31:54 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:55 [[34mdebug[39m]: Found 1 flight locations for query: jf
+2025-12-08 12:31:55 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=jf&limit=12 [32m200[0m 84.387 ms - 154[0m
+2025-12-08 12:31:55 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:55 [[34mdebug[39m]: Found 1 flight locations for query: jfk
+2025-12-08 12:31:55 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=jfk&limit=12 [32m200[0m 97.732 ms - 154[0m
+2025-12-08 12:31:58 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:58 [[34mdebug[39m]: Found 12 flight locations for query: s
+2025-12-08 12:31:58 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=s&limit=12 [36m304[0m 85.138 ms - -[0m
+2025-12-08 12:31:59 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:31:59 [[34mdebug[39m]: Found 1 flight locations for query: sjc
+2025-12-08 12:31:59 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/locations?q=sjc&limit=12 [36m304[0m 91.720 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SJC+-+San+Jose+(Norman+Y.+Mineta+San+Jose+International+Airport)&to=JFK+-+New+York+(John+F+Kennedy+International+Airport)&startDate=2025-12-01&endDate=2026-01-31 [32m200[0m 80.308 ms - 2[0m
+2025-12-08 12:32:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:07 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-08"}
+2025-12-08 12:32:07 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:07 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-19"}
+2025-12-08 12:32:07 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-08&nonstop=any&pageSize=100 [32m200[0m 81.907 ms - 563[0m
+2025-12-08 12:32:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-19&nonstop=any&pageSize=100 [32m200[0m 80.194 ms - 78[0m
+2025-12-08 12:32:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:07 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-08"}
+2025-12-08 12:32:07 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:07 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-19"}
+2025-12-08 12:32:07 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=JFK&to=SJC&departDate=2025-12-08&returnDate=2025-12-19 [32m200[0m 154.616 ms - 15[0m
+2025-12-08 12:32:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 81.548 ms - -[0m
+2025-12-08 12:32:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-19&nonstop=any&pageSize=100 [36m304[0m 81.064 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=JFK&to=SJC&departDate=2025-12-08&returnDate=2025-12-19 [36m304[0m 156.917 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=JFK&to=SJC&departDate=2025-12-08&returnDate=2025-12-19 [36m304[0m 167.474 ms - -[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=JFK&to=SJC&startDate=2025-12-01&endDate=2026-01-31 [32m200[0m 79.884 ms - 223[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=JFK&to=SJC&startDate=2026-01-01&endDate=2026-02-28 [32m200[0m 81.432 ms - 2[0m
+2025-12-08 12:32:21 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:21 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-08"}
+2025-12-08 12:32:21 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:21 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:21 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-19"}
+2025-12-08 12:32:21 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:21 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 98.076 ms - -[0m
+2025-12-08 12:32:21 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-19&nonstop=any&pageSize=100 [32m200[0m 95.508 ms - 78[0m
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-08&returnDate=2025-12-19 [32m200[0m 184.275 ms - 15[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SJC&to=JFK&startDate=2026-01-01&endDate=2026-02-28 [32m200[0m 88.911 ms - 2[0m
+2025-12-08 12:32:35 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:35 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-19"}
+2025-12-08 12:32:35 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:35 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?page=1&pageSize=10&sortBy=price&sortOrder=asc&from=SJC&to=JFK&departDate=2025-12-19 [32m200[0m 93.555 ms - 77[0m
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-19 [32m200[0m 91.214 ms - 15[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SJC&to=JFK&startDate=2025-12-12&endDate=2025-12-26 [32m200[0m 91.540 ms - 2[0m
+2025-12-08 12:32:45 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:45 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-09"}
+2025-12-08 12:32:45 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:45 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:45 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-19"}
+2025-12-08 12:32:45 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:45 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-09&nonstop=any&pageSize=100 [32m200[0m 83.587 ms - 564[0m
+2025-12-08 12:32:46 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-19&nonstop=any&pageSize=100 [36m304[0m 83.909 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-09&returnDate=2025-12-19 [32m200[0m 157.633 ms - 15[0m
+2025-12-08 12:32:48 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:48 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-19"}
+2025-12-08 12:32:48 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:48 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:48 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-08"}
+2025-12-08 12:32:48 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-19&nonstop=any&pageSize=100 [36m304[0m 92.392 ms - -[0m
+2025-12-08 12:32:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-08&nonstop=any&pageSize=100 [36m304[0m 90.285 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-08&returnDate=2025-12-19 [36m304[0m 179.519 ms - -[0m
+2025-12-08 12:32:50 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:50 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-08"}
+2025-12-08 12:32:50 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-08 [32m200[0m 77.182 ms - 34[0m
+2025-12-08 12:32:50 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?page=1&pageSize=10&sortBy=price&sortOrder=asc&from=SJC&to=JFK&departDate=2025-12-08 [32m200[0m 86.537 ms - 564[0m
+[0mGET /api/v1/listings/flights/prices-by-date?from=SJC&to=JFK&startDate=2025-12-01&endDate=2025-12-15 [32m200[0m 82.410 ms - 223[0m
+2025-12-08 12:32:53 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:53 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-09"}
+2025-12-08 12:32:53 [[34mdebug[39m]: searchFlights sort: {"price":1}
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-09 [32m200[0m 80.275 ms - 34[0m
+2025-12-08 12:32:53 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?page=1&pageSize=10&sortBy=price&sortOrder=asc&from=SJC&to=JFK&departDate=2025-12-09 [32m200[0m 90.846 ms - 563[0m
+2025-12-08 12:32:57 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:57 [[34mdebug[39m]: searchFlights query filter: {"from":"JFK","to":"SJC","departDate":"2025-12-16"}
+2025-12-08 12:32:57 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:57 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:32:57 [[34mdebug[39m]: searchFlights query filter: {"from":"SJC","to":"JFK","departDate":"2025-12-09"}
+2025-12-08 12:32:57 [[34mdebug[39m]: searchFlights sort: {"price":1}
+2025-12-08 12:32:57 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=JFK&to=SJC&departDate=2025-12-16&nonstop=any&pageSize=100 [32m200[0m 86.431 ms - 78[0m
+2025-12-08 12:32:57 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/flights/search?from=SJC&to=JFK&departDate=2025-12-09&nonstop=any&pageSize=100 [36m304[0m 86.067 ms - -[0m
+[0mGET /api/v1/listings/flights/airlines?from=SJC&to=JFK&departDate=2025-12-09&returnDate=2025-12-16 [32m200[0m 162.402 ms - 15[0m
+2025-12-08 12:33:45 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+2025-12-08 12:33:45 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [32m200[0m 633.887 ms - -[0m
+2025-12-08 12:33:46 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 86.825 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 166.148 ms - -[0m
+2025-12-08 12:33:57 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:33:57 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"N","11":"e","12":"w","13":" ","14":"Y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 12:33:57 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 89.231 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 87.950 ms - -[0m
+2025-12-08 12:33:57 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=New+York [36m304[0m 97.777 ms - -[0m
+2025-12-08 12:33:57 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:33:57 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"N","11":"e","12":"w","13":" ","14":"Y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 12:33:57 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 102.671 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 102.535 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 191.800 ms - -[0m
+2025-12-08 12:33:57 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=New+York [36m304[0m 93.626 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 184.320 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=New+York&limit=18 [36m304[0m 174.789 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=be&limit=10 [36m304[0m 163.170 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=new&limit=10 [36m304[0m 160.827 ms - -[0m
+2025-12-08 12:37:56 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:37:56 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"N","11":"e","12":"w","13":" ","14":"Y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 12:37:56 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 79.488 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 82.731 ms - -[0m
+2025-12-08 12:37:56 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=New+York [36m304[0m 83.975 ms - -[0m
+2025-12-08 12:37:56 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:37:56 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"N","11":"e","12":"w","13":" ","14":"Y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 12:37:56 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 79.097 ms - -[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 81.136 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 161.803 ms - -[0m
+2025-12-08 12:37:56 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=New+York [36m304[0m 85.578 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 158.254 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=New+York&limit=18 [36m304[0m 158.851 ms - -[0m
+[0mGET /api/v1/listings/cars/locations?q=ne&limit=10 [36m304[0m 80.303 ms - -[0m
+[0mGET /api/v1/listings/cars/locations?q=new&limit=10 [36m304[0m 79.508 ms - -[0m
+[0mGET /api/v1/listings/cars/locations?q=new&limit=10 [36m304[0m 81.349 ms - -[0m
+[0mGET /api/v1/listings/cars/locations?q=new+y&limit=10 [32m200[0m 84.487 ms - 22[0m
+[0mGET /api/v1/listings/cars/locations?q=new+yo&limit=10 [32m200[0m 79.105 ms - 22[0m
+[0mGET /api/v1/listings/cars/locations?q=new+yor&limit=10 [32m200[0m 78.187 ms - 22[0m
+[0mGET /api/v1/listings/cars/locations?q=new+york&limit=10 [32m200[0m 90.374 ms - 22[0m
+2025-12-08 12:38:27 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:38:27 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:38:27 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [32m200[0m 85.054 ms - -[0m
+2025-12-08 12:38:27 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:38:28 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 85.735 ms - -[0m
+2025-12-08 12:38:28 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [32m200[0m 440.517 ms - -[0m
+2025-12-08 12:38:28 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:38:28 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 198.439 ms - -[0m
+2025-12-08 12:38:32 [[32minfo[39m]: Click tracked: {"listingId":"CR-1765179320235","page":"car-search","action":"click","userId":"anonymous"}
+[0mPOST /api/v1/tracking/click [32m201[0m 120.337 ms - 56[0m
+2025-12-08 12:38:32 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:38:32 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/CR-1765179320235 [32m200[0m 83.362 ms - 468[0m
+2025-12-08 12:42:22 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:42:22 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/CR-1765179320235 [36m304[0m 82.231 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 12:45:34 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 12:45:34 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 12:45:34 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 12:45:34 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 12:45:34 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 12:45:34 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 12:45:34 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 12:45:49 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 12:45:49 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 12:45:49 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 12:45:49 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 12:45:49 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 12:45:49 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 12:45:49 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 12:46:18 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:19 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 12:46:19 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/CR-1765179320235 [36m304[0m 1062.308 ms - -[0m
+2025-12-08 12:46:36 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:36 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:37 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 597.456 ms - -[0m
+2025-12-08 12:46:37 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:37 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 82.921 ms - -[0m
+2025-12-08 12:46:37 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 944.940 ms - -[0m
+2025-12-08 12:46:37 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:37 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 198.607 ms - -[0m
+2025-12-08 12:46:43 [[32minfo[39m]: Click tracked: {"listingId":"CR-US-5487","page":"car-search","action":"click","userId":"anonymous"}
+[0mPOST /api/v1/tracking/click [32m201[0m 105.933 ms - 56[0m
+2025-12-08 12:46:43 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:43 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/CR-US-5487 [32m200[0m 81.614 ms - 272[0m
+2025-12-08 12:46:46 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:46 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:46 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 81.714 ms - -[0m
+2025-12-08 12:46:46 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:46 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 81.317 ms - -[0m
+2025-12-08 12:46:46 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 621.956 ms - -[0m
+2025-12-08 12:46:46 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:46:47 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 418.590 ms - -[0m
+2025-12-08 12:49:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:49:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:49:47 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 94.490 ms - -[0m
+2025-12-08 12:49:47 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 452.809 ms - -[0m
+2025-12-08 12:49:55 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:49:55 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:49:55 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 81.883 ms - -[0m
+2025-12-08 12:49:55 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 439.013 ms - -[0m
+2025-12-08 12:50:35 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:50:35 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:50:35 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 83.354 ms - -[0m
+2025-12-08 12:50:35 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 435.796 ms - -[0m
+2025-12-08 12:50:51 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:50:51 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:50:51 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 86.722 ms - -[0m
+2025-12-08 12:50:51 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 425.837 ms - -[0m
+2025-12-08 12:51:11 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:51:11 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:51:11 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 88.599 ms - -[0m
+2025-12-08 12:51:11 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:51:11 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [36m304[0m 91.341 ms - -[0m
+2025-12-08 12:51:11 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 431.067 ms - -[0m
+2025-12-08 12:51:11 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:51:12 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 202.774 ms - -[0m
+2025-12-08 12:52:28 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:52:28 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:52:28 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [32m200[0m 80.883 ms - -[0m
+2025-12-08 12:52:28 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [32m200[0m 423.169 ms - -[0m
+2025-12-08 12:54:12 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:54:12 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [32m200[0m 89.622 ms - -[0m
+2025-12-08 12:54:17 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:54:17 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=desc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [32m200[0m 84.286 ms - -[0m
+2025-12-08 12:54:19 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 12:54:19 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=seats&sortOrder=desc&location=new+york&pickupDate=2025-12-08&dropoffDate=2025-12-09&pickupTime=15:00&dropoffTime=12:00 [32m200[0m 84.922 ms - -[0m
+2025-12-08 12:55:30 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+2025-12-08 12:55:30 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [32m200[0m 618.246 ms - -[0m
+2025-12-08 12:55:30 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 85.554 ms - -[0m
+[0mGET /api/v1/bookings/53a3bb1b-b6cf-4c65-a9b4-e94c001c4a1d [32m200[0m 671.498 ms - -[0m
+[0mGET /api/v1/bookings/53a3bb1b-b6cf-4c65-a9b4-e94c001c4a1d [36m304[0m 163.610 ms - -[0m
+2025-12-08 12:56:39 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 612.516 ms - -[0m
+2025-12-08 12:56:40 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 84.919 ms - -[0m
+[0mGET /api/v1/bookings/53a3bb1b-b6cf-4c65-a9b4-e94c001c4a1d [36m304[0m 699.764 ms - -[0m
+[0mGET /api/v1/bookings/53a3bb1b-b6cf-4c65-a9b4-e94c001c4a1d [36m304[0m 163.216 ms - -[0m
+[0mGET /api/v1/bookings/53a3bb1b-b6cf-4c65-a9b4-e94c001c4a1d [36m304[0m 164.755 ms - -[0m
+[0mGET /api/v1/bookings/53a3bb1b-b6cf-4c65-a9b4-e94c001c4a1d [36m304[0m 162.123 ms - -[0m
+2025-12-08 12:58:21 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 637.342 ms - -[0m
+2025-12-08 12:58:22 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 91.028 ms - -[0m
+2025-12-08 12:58:53 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 579.856 ms - -[0m
+2025-12-08 12:58:53 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 92.371 ms - -[0m
+[0mGET /api/v1/payments [32m200[0m 165.720 ms - -[0m
+[0mGET /api/v1/payments [36m304[0m 164.129 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 597.694 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 82.750 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 12:59:27 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 12:59:27 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 12:59:27 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 12:59:27 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 12:59:27 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 12:59:27 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 12:59:27 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 12:59:40 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 12:59:40 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 12:59:40 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 12:59:40 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 12:59:40 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 12:59:40 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 12:59:40 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 12:59:55 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 12:59:55 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 12:59:55 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 12:59:55 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 12:59:55 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 12:59:55 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 12:59:55 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:00:01 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:00:01 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:00:01 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:00:01 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:00:01 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:00:01 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:00:01 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 13:00:14 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 13:00:15 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+2025-12-08 13:00:15 [[32minfo[39m]: Proxying POST /api/v1/concierge/sessions to AI-agent service
+[0mPOST /api/v1/ai-agent/sessions [32m200[0m 2622.280 ms - 229[0m
+2025-12-08 13:01:02 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 583.652 ms - -[0m
+2025-12-08 13:01:02 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 87.179 ms - -[0m
+2025-12-08 13:01:08 [[32minfo[39m]: Booking 53a3bb1b-b6cf-4c65-a9b4-e94c001c4a1d status updated to CANCELLED
+2025-12-08 13:01:08 [[33mwarn[39m]: Kafka disabled; skipping send to topic bookings.updated
+[0mPOST /api/v1/bookings/53a3bb1b-b6cf-4c65-a9b4-e94c001c4a1d/cancel [32m200[0m 598.088 ms - -[0m
+2025-12-08 13:01:08 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [32m200[0m 92.934 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:01:09 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:01:09 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:01:09 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:01:09 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:01:09 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:01:09 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:01:09 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 13:01:10 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+2025-12-08 13:01:10 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 681.554 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 724.024 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 84.188 ms - -[0m
+[0mGET /api/v1/payments [32m200[0m 831.989 ms - -[0m
+[0mGET /api/v1/payments [36m304[0m 159.461 ms - -[0m
+2025-12-08 13:02:30 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 85.567 ms - -[0m
+2025-12-08 13:02:30 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 82.858 ms - -[0m
+2025-12-08 13:02:44 [[32minfo[39m]: MongoDB connected successfully
+[0mGET /api/v1/listings/cars/locations?q=new&limit=10 [32m200[0m 991.203 ms - 206[0m
+2025-12-08 13:03:04 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:03:04 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:03:04 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [32m200[0m 628.021 ms - -[0m
+2025-12-08 13:03:04 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:03:04 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 85.173 ms - -[0m
+2025-12-08 13:03:05 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [32m200[0m 949.597 ms - -[0m
+2025-12-08 13:03:05 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:03:05 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 350.158 ms - -[0m
+2025-12-08 13:03:18 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:03:19 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&type=Compact&vendor=Budget&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [32m200[0m 84.899 ms - -[0m
+2025-12-08 13:03:21 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:03:21 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&type=Economy&vendor=Budget&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [32m200[0m 85.620 ms - 77[0m
+2025-12-08 13:03:22 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:03:22 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&type=Compact&vendor=Budget&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 91.061 ms - -[0m
+2025-12-08 13:03:27 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:03:27 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 99.749 ms - -[0m
+2025-12-08 13:04:03 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:04:03 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&state=IN&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [32m200[0m 94.641 ms - 77[0m
+2025-12-08 13:04:07 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:04:07 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 85.716 ms - -[0m
+2025-12-08 13:04:15 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:04:15 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 82.773 ms - -[0m
+2025-12-08 13:04:24 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:04:24 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 90.957 ms - -[0m
+2025-12-08 13:04:33 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:04:33 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 83.350 ms - -[0m
+2025-12-08 13:05:39 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:05:40 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 84.676 ms - -[0m
+2025-12-08 13:05:41 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:05:41 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=desc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [32m200[0m 99.555 ms - -[0m
+2025-12-08 13:05:42 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:05:42 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 84.726 ms - -[0m
+2025-12-08 13:05:44 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:05:44 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=seats&sortOrder=desc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [32m200[0m 84.716 ms - -[0m
+2025-12-08 13:05:56 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:05:56 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 83.508 ms - -[0m
+2025-12-08 13:06:25 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:06:25 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:06:25 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 82.321 ms - -[0m
+2025-12-08 13:06:26 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 644.687 ms - -[0m
+2025-12-08 13:07:05 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:07:05 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:07:05 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 140.719 ms - -[0m
+2025-12-08 13:07:05 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 489.142 ms - -[0m
+2025-12-08 13:07:48 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:07:48 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:07:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 82.983 ms - -[0m
+2025-12-08 13:07:48 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 446.336 ms - -[0m
+2025-12-08 13:07:56 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:07:56 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:07:56 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 84.454 ms - -[0m
+2025-12-08 13:07:56 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 435.325 ms - -[0m
+2025-12-08 13:09:23 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:09:23 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:09:23 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 101.758 ms - -[0m
+2025-12-08 13:09:23 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:09:23 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 86.001 ms - -[0m
+2025-12-08 13:09:23 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 453.864 ms - -[0m
+2025-12-08 13:09:23 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:09:23 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 285.666 ms - -[0m
+2025-12-08 13:12:28 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:28 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:28 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 82.754 ms - -[0m
+2025-12-08 13:12:29 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 451.157 ms - -[0m
+2025-12-08 13:12:36 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:36 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:36 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 81.322 ms - -[0m
+2025-12-08 13:12:36 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 433.684 ms - -[0m
+2025-12-08 13:12:37 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:37 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 96.192 ms - -[0m
+2025-12-08 13:12:38 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:38 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=desc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 86.146 ms - -[0m
+2025-12-08 13:12:39 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:39 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=seats&sortOrder=desc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 83.798 ms - -[0m
+2025-12-08 13:12:44 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:44 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:45 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=seats&sortOrder=desc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 83.242 ms - -[0m
+2025-12-08 13:12:45 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 418.567 ms - -[0m
+2025-12-08 13:12:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:47 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:47 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=seats&sortOrder=desc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 82.366 ms - -[0m
+2025-12-08 13:12:47 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 437.700 ms - -[0m
+2025-12-08 13:12:49 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:49 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:50 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 86.409 ms - -[0m
+2025-12-08 13:12:50 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:50 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 83.582 ms - -[0m
+2025-12-08 13:12:50 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 445.376 ms - -[0m
+2025-12-08 13:12:50 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:50 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 204.816 ms - -[0m
+2025-12-08 13:12:57 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:57 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:12:57 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 83.304 ms - -[0m
+2025-12-08 13:12:57 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 429.249 ms - -[0m
+2025-12-08 13:13:09 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:13:09 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 93.474 ms - -[0m
+2025-12-08 13:16:02 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:16:02 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:16:02 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 89.631 ms - -[0m
+2025-12-08 13:16:02 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:16:02 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?page=1&pageSize=10&sortBy=pricePerDay&sortOrder=asc&location=New+York&pickupDate=2025-12-10&dropoffDate=2025-12-17&pickupTime=12:01&dropoffTime=12:00 [36m304[0m 91.597 ms - -[0m
+2025-12-08 13:16:02 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 429.099 ms - -[0m
+2025-12-08 13:16:02 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:16:03 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/cars/search?pageSize=1000 [36m304[0m 411.242 ms - -[0m
+[0mPOST /api/v1/auth/logout [32m200[0m 2.263 ms - 54[0m
+2025-12-08 13:18:43 [[32minfo[39m]: User logged in: OwnerTest@gmail.com
+[0mPOST /api/v1/auth/login [32m200[0m 1324.651 ms - 908[0m
+[0mGET /api/v1/owner/dashboard [32m200[0m 1171.886 ms - 118[0m
+2025-12-08 13:18:53 [[32minfo[39m]: === OWNER HOTELS REQUEST ===
+2025-12-08 13:18:53 [[32minfo[39m]: Owner ID: {"0":"6","1":"9","2":"3","3":"5","4":"9","5":"f","6":"f","7":"8","8":"c","9":"f","10":"d","11":"9","12":"1","13":"c","14":"7","15":"e","16":"e","17":"1","18":"0","19":"8","20":"3","21":"9","22":"0","23":"8"}
+2025-12-08 13:18:53 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 5 hotels
+2025-12-08 13:18:53 [[32minfo[39m]: Hotels: {"0":{"id":"HT-1765125799365","name":"Grand Plaza Downtown"},"1":{"id":"HT-10642","name":"Sunset Paradise Resort"},"2":{"id":"HT-10643","name":"Downtown Business Suites"},"3":{"id":"HT-10644","name":"Mountain View Lodge"},"4":{"id":"HT-1765173313481","name":"Beautiful Apartments"}}
+2025-12-08 13:18:53 [[32minfo[39m]: Sending response: {"0":"{","1":"\"","2":"i","3":"t","4":"e","5":"m","6":"s","7":"\"","8":":","9":"[","10":"{","11":"\"","12":"_","13":"i","14":"d","15":"\"","16":":","17":"\"","18":"H","19":"T","20":"-","21":"1","22":"7","23":"6","24":"5","25":"1","26":"2","27":"5","28":"7","29":"9","30":"9","31":"3","32":"6","33":"5","34":"\"","35":",","36":"\"","37":"i","38":"d","39":"\"","40":":","41":"\"","42":"H","43":"T","44":"-","45":"1","46":"7","47":"6","48":"5","49":"1","50":"2","51":"5","52":"7","53":"9","54":"9","55":"3","56":"6","57":"5","58":"\"","59":",","60":"\"","61":"n","62":"a","63":"m","64":"e","65":"\"","66":":","67":"\"","68":"G","69":"r","70":"a","71":"n","72":"d","73":" ","74":"P","75":"l","76":"a","77":"z","78":"a","79":" ","80":"D","81":"o","82":"w","83":"n","84":"t","85":"o","86":"w","87":"n","88":"\"","89":",","90":"\"","91":"c","92":"i","93":"t","94":"y","95":"\"","96":":","97":"\"","98":"N","99":"e","100":"w","101":" ","102":"Y","103":"o","104":"r","105":"k","106":"\"","107":",","108":"\"","109":"a","110":"d","111":"d","112":"r","113":"e","114":"s","115":"s","116":"\"","117":":","118":"\"","119":"1","120":"2","121":"3","122":" ","123":"M","124":"a","125":"d","126":"i","127":"s","128":"o","129":"n","130":" ","131":"A","132":"v","133":"e","134":"n","135":"u","136":"e","137":",","138":" ","139":"M","140":"a","141":"n","142":"h","143":"a","144":"t","145":"t","146":"a","147":"n","148":",","149":" ","150":"N","151":"Y","152":" ","153":"1","154":"0","155":"0","156":"1","157":"0","158":"\"","159":",","160":"\"","161":"d","162":"e","163":"s","164":"c","165":"r","166":"i","167":"p","168":"t","169":"i","170":"o","171":"n","172":"\"","173":":","174":"\"","175":"L","176":"u","177":"x","178":"u","179":"r","180":"i","181":"o","182":"u","183":"s","184":" ","185":"5","186":"-","187":"s","188":"t","189":"a","190":"r","191":" ","192":"h","193":"o","194":"t","195":"e","196":"l","197":" ","198":"i","199":"n"}
+[0mGET /api/v1/owner/hotels [36m304[0m 95.963 ms - -[0m
+2025-12-08 13:20:06 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 3 cars
+[0mGET /api/v1/owner/cars [32m200[0m 82.811 ms - -[0m
+2025-12-08 13:20:10 [[32minfo[39m]: === getPropertyClicks ===
+2025-12-08 13:20:10 [[32minfo[39m]: User: {"id":"69359ff8cfd91c7ee1083908","email":"OwnerTest@gmail.com","profileType":"owner","role":"user"}
+2025-12-08 13:20:10 [[32minfo[39m]: Owner filter: {"ownerId":"69359ff8cfd91c7ee1083908","isOwner":true}
+2025-12-08 13:20:10 [[32minfo[39m]: getPropertyClicks called with filters: {"startDate":"2025-11-08","endDate":"2025-12-09","limit":20,"ownerId":"69359ff8cfd91c7ee1083908"}
+2025-12-08 13:20:10 [[32minfo[39m]: Filtering by ownerId: {"0":"6","1":"9","2":"3","3":"5","4":"9","5":"f","6":"f","7":"8","8":"c","9":"f","10":"d","11":"9","12":"1","13":"c","14":"7","15":"e","16":"e","17":"1","18":"0","19":"8","20":"3","21":"9","22":"0","23":"8"}
+2025-12-08 13:20:10 [[32minfo[39m]: === OWNER HOTELS REQUEST ===
+2025-12-08 13:20:10 [[32minfo[39m]: Owner ID: {"0":"6","1":"9","2":"3","3":"5","4":"9","5":"f","6":"f","7":"8","8":"c","9":"f","10":"d","11":"9","12":"1","13":"c","14":"7","15":"e","16":"e","17":"1","18":"0","19":"8","20":"3","21":"9","22":"0","23":"8"}
+2025-12-08 13:20:10 [[32minfo[39m]: === getPropertyReviews ===
+2025-12-08 13:20:10 [[32minfo[39m]: User: {"id":"69359ff8cfd91c7ee1083908","email":"OwnerTest@gmail.com","profileType":"owner"}
+2025-12-08 13:20:10 [[32minfo[39m]: Owner filter: {"ownerId":"69359ff8cfd91c7ee1083908","isOwner":true}
+2025-12-08 13:20:10 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 3 cars
+[0mGET /api/v1/owner/cars [36m304[0m 80.614 ms - -[0m
+[0mGET /api/v1/analytics/clicks/per-page?startDate=2025-11-08&endDate=2025-12-09&action=click [32m200[0m 83.351 ms - 746[0m
+2025-12-08 13:20:10 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 5 hotels
+2025-12-08 13:20:10 [[32minfo[39m]: Hotels: {"0":{"id":"HT-1765125799365","name":"Grand Plaza Downtown"},"1":{"id":"HT-10642","name":"Sunset Paradise Resort"},"2":{"id":"HT-10643","name":"Downtown Business Suites"},"3":{"id":"HT-10644","name":"Mountain View Lodge"},"4":{"id":"HT-1765173313481","name":"Beautiful Apartments"}}
+2025-12-08 13:20:10 [[32minfo[39m]: Sending response: {"0":"{","1":"\"","2":"i","3":"t","4":"e","5":"m","6":"s","7":"\"","8":":","9":"[","10":"{","11":"\"","12":"_","13":"i","14":"d","15":"\"","16":":","17":"\"","18":"H","19":"T","20":"-","21":"1","22":"7","23":"6","24":"5","25":"1","26":"2","27":"5","28":"7","29":"9","30":"9","31":"3","32":"6","33":"5","34":"\"","35":",","36":"\"","37":"i","38":"d","39":"\"","40":":","41":"\"","42":"H","43":"T","44":"-","45":"1","46":"7","47":"6","48":"5","49":"1","50":"2","51":"5","52":"7","53":"9","54":"9","55":"3","56":"6","57":"5","58":"\"","59":",","60":"\"","61":"n","62":"a","63":"m","64":"e","65":"\"","66":":","67":"\"","68":"G","69":"r","70":"a","71":"n","72":"d","73":" ","74":"P","75":"l","76":"a","77":"z","78":"a","79":" ","80":"D","81":"o","82":"w","83":"n","84":"t","85":"o","86":"w","87":"n","88":"\"","89":",","90":"\"","91":"c","92":"i","93":"t","94":"y","95":"\"","96":":","97":"\"","98":"N","99":"e","100":"w","101":" ","102":"Y","103":"o","104":"r","105":"k","106":"\"","107":",","108":"\"","109":"a","110":"d","111":"d","112":"r","113":"e","114":"s","115":"s","116":"\"","117":":","118":"\"","119":"1","120":"2","121":"3","122":" ","123":"M","124":"a","125":"d","126":"i","127":"s","128":"o","129":"n","130":" ","131":"A","132":"v","133":"e","134":"n","135":"u","136":"e","137":",","138":" ","139":"M","140":"a","141":"n","142":"h","143":"a","144":"t","145":"t","146":"a","147":"n","148":",","149":" ","150":"N","151":"Y","152":" ","153":"1","154":"0","155":"0","156":"1","157":"0","158":"\"","159":",","160":"\"","161":"d","162":"e","163":"s","164":"c","165":"r","166":"i","167":"p","168":"t","169":"i","170":"o","171":"n","172":"\"","173":":","174":"\"","175":"L","176":"u","177":"x","178":"u","179":"r","180":"i","181":"o","182":"u","183":"s","184":" ","185":"5","186":"-","187":"s","188":"t","189":"a","190":"r","191":" ","192":"h","193":"o","194":"t","195":"e","196":"l","197":" ","198":"i","199":"n"}
+[0mGET /api/v1/owner/hotels [36m304[0m 148.446 ms - -[0m
+[0mGET /api/v1/analytics/bidding?startDate=2025-11-08&endDate=2025-12-09 [32m200[0m 231.838 ms - -[0m
+2025-12-08 13:20:11 [[32minfo[39m]: Owner property IDs: {"0":"HT-1765125799365","1":"HT-10642","2":"HT-10643","3":"HT-10644","4":"HT-1765173313481","5":"CR-5630","6":"CR-5631","7":"CR-5632"}
+2025-12-08 13:20:11 [[32minfo[39m]: Filtering clicks to owner properties: {"0":"HT-1765125799365","1":"HT-10642","2":"HT-10643","3":"HT-10644","4":"HT-1765173313481","5":"CR-5630","6":"CR-5631","7":"CR-5632"}
+2025-12-08 13:20:11 [[32minfo[39m]: Result: {"itemCount":3}
+[0mGET /api/v1/analytics/clicks/properties?startDate=2025-11-08&endDate=2025-12-09&limit=20 [32m200[0m 735.255 ms - 373[0m
+2025-12-08 13:20:11 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:20:11 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/HT-1765125799365 [32m200[0m 82.509 ms - 1020[0m
+2025-12-08 13:20:11 [[34mdebug[39m]: Cache disabled, skipping get
+[0mGET /api/v1/analytics/reviews/properties?startDate=2025-11-08&endDate=2025-12-09&limit=20 [32m200[0m 830.971 ms - 273[0m
+2025-12-08 13:20:11 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/HT-10642 [32m200[0m 80.846 ms - 542[0m
+2025-12-08 13:20:11 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:20:11 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/HT-10643 [32m200[0m 81.010 ms - 519[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:20:26 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:20:26 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:20:26 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:20:26 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:20:26 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:20:26 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:20:26 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:21:02 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:21:02 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:21:02 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:21:02 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:21:02 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:21:02 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:21:02 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[0mGET /api/v1/owner/dashboard [0m-[0m - ms - -[0m
+2025-12-08 13:21:45 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 13:21:45 [[32minfo[39m]: MongoDB connected successfully
+[0mGET /api/v1/owner/dashboard [32m200[0m 1590.428 ms - 118[0m
+2025-12-08 13:21:53 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 3 cars
+[0mGET /api/v1/owner/cars [36m304[0m 82.235 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:22:54 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:22:54 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:22:54 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:22:54 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:22:54 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:22:54 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:22:54 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 13:23:00 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 13:23:00 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:23:01 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:23:01 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:23:01 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:23:01 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:23:01 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:23:01 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:23:01 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 13:23:03 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 13:23:03 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[0mGET /api/v1/owner/bookings [0m-[0m - ms - -[0m
+[0mGET /api/v1/owner/bookings [32m200[0m 754.586 ms - -[0m
+[0mGET /api/v1/owner/dashboard [36m304[0m 167.863 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:23:13 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:23:13 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:23:13 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:23:13 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:23:13 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:23:13 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:23:13 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 13:23:23 [[32minfo[39m]: === OWNER HOTELS REQUEST ===
+2025-12-08 13:23:23 [[32minfo[39m]: Owner ID: {"0":"6","1":"9","2":"3","3":"5","4":"9","5":"f","6":"f","7":"8","8":"c","9":"f","10":"d","11":"9","12":"1","13":"c","14":"7","15":"e","16":"e","17":"1","18":"0","19":"8","20":"3","21":"9","22":"0","23":"8"}
+2025-12-08 13:23:24 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 13:23:24 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 5 hotels
+2025-12-08 13:23:24 [[32minfo[39m]: Hotels: {"0":{"id":"HT-1765125799365","name":"Grand Plaza Downtown"},"1":{"id":"HT-10642","name":"Sunset Paradise Resort"},"2":{"id":"HT-10643","name":"Downtown Business Suites"},"3":{"id":"HT-10644","name":"Mountain View Lodge"},"4":{"id":"HT-1765173313481","name":"Beautiful Apartments"}}
+2025-12-08 13:23:24 [[32minfo[39m]: Sending response: {"0":"{","1":"\"","2":"i","3":"t","4":"e","5":"m","6":"s","7":"\"","8":":","9":"[","10":"{","11":"\"","12":"_","13":"i","14":"d","15":"\"","16":":","17":"\"","18":"H","19":"T","20":"-","21":"1","22":"7","23":"6","24":"5","25":"1","26":"2","27":"5","28":"7","29":"9","30":"9","31":"3","32":"6","33":"5","34":"\"","35":",","36":"\"","37":"i","38":"d","39":"\"","40":":","41":"\"","42":"H","43":"T","44":"-","45":"1","46":"7","47":"6","48":"5","49":"1","50":"2","51":"5","52":"7","53":"9","54":"9","55":"3","56":"6","57":"5","58":"\"","59":",","60":"\"","61":"n","62":"a","63":"m","64":"e","65":"\"","66":":","67":"\"","68":"G","69":"r","70":"a","71":"n","72":"d","73":" ","74":"P","75":"l","76":"a","77":"z","78":"a","79":" ","80":"D","81":"o","82":"w","83":"n","84":"t","85":"o","86":"w","87":"n","88":"\"","89":",","90":"\"","91":"c","92":"i","93":"t","94":"y","95":"\"","96":":","97":"\"","98":"N","99":"e","100":"w","101":" ","102":"Y","103":"o","104":"r","105":"k","106":"\"","107":",","108":"\"","109":"a","110":"d","111":"d","112":"r","113":"e","114":"s","115":"s","116":"\"","117":":","118":"\"","119":"1","120":"2","121":"3","122":" ","123":"M","124":"a","125":"d","126":"i","127":"s","128":"o","129":"n","130":" ","131":"A","132":"v","133":"e","134":"n","135":"u","136":"e","137":",","138":" ","139":"M","140":"a","141":"n","142":"h","143":"a","144":"t","145":"t","146":"a","147":"n","148":",","149":" ","150":"N","151":"Y","152":" ","153":"1","154":"0","155":"0","156":"1","157":"0","158":"\"","159":",","160":"\"","161":"d","162":"e","163":"s","164":"c","165":"r","166":"i","167":"p","168":"t","169":"i","170":"o","171":"n","172":"\"","173":":","174":"\"","175":"L","176":"u","177":"x","178":"u","179":"r","180":"i","181":"o","182":"u","183":"s","184":" ","185":"5","186":"-","187":"s","188":"t","189":"a","190":"r","191":" ","192":"h","193":"o","194":"t","195":"e","196":"l","197":" ","198":"i","199":"n"}
+[0mGET /api/v1/owner/hotels [36m304[0m 1010.547 ms - -[0m
+2025-12-08 13:23:46 [[32minfo[39m]: User logged in: TravellerTest@gmail.com
+[0mPOST /api/v1/auth/login [32m200[0m 341.891 ms - 744[0m
+[0mGET /api/v1/listings/hotels/locations?q=Grand+Plaza+Downtown&limit=10 [32m200[0m 189.281 ms - 154[0m
+2025-12-08 13:24:00 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:24:00 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"G","11":"r","12":"a","13":"n","14":"d","15":" ","16":"P","17":"l","18":"a","19":"z","20":"a","21":" ","22":"D","23":"o","24":"w","25":"n","26":"t","27":"o","28":"w","29":"n","30":"/","31":"i","32":"\"","33":"}"}
+2025-12-08 13:24:00 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/amenities [32m200[0m 96.311 ms - 179[0m
+[0mGET /api/v1/listings/hotels/amenities [36m304[0m 289.315 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [32m200[0m 547.980 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Grand+Plaza+Downtown&limit=18 [32m200[0m 365.530 ms - 154[0m
+[0mGET /api/v1/listings/hotels/property-types [32m200[0m 645.704 ms - 74[0m
+2025-12-08 13:24:01 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=Grand+Plaza+Downtown [32m200[0m 667.762 ms - 117[0m
+2025-12-08 13:24:01 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:24:01 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"G","11":"r","12":"a","13":"n","14":"d","15":" ","16":"P","17":"l","18":"a","19":"z","20":"a","21":" ","22":"D","23":"o","24":"w","25":"n","26":"t","27":"o","28":"w","29":"n","30":"/","31":"i","32":"\"","33":"}"}
+2025-12-08 13:24:01 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+[0mGET /api/v1/listings/hotels/property-types [36m304[0m 96.878 ms - -[0m
+2025-12-08 13:24:01 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=Grand+Plaza+Downtown [36m304[0m 84.328 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Grand+Plaza+Downtown&limit=18 [36m304[0m 162.968 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?limit=18 [36m304[0m 674.721 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Grand+Plaza+Downtown&limit=18 [36m304[0m 159.943 ms - -[0m
+2025-12-08 13:24:03 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:24:03 [[34mdebug[39m]: searchHotels query filter: {"0":"{","1":"\"","2":"c","3":"i","4":"t","5":"y","6":"\"","7":":","8":"\"","9":"/","10":"N","11":"e","12":"w","13":" ","14":"Y","15":"o","16":"r","17":"k","18":"/","19":"i","20":"\"","21":"}"}
+2025-12-08 13:24:03 [[34mdebug[39m]: searchHotels sort: {"rating":-1}
+2025-12-08 13:24:03 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/search?page=1&pageSize=10&sortBy=rating&sortOrder=desc&city=New+York [32m200[0m 93.951 ms - -[0m
+[0mGET /api/v1/listings/hotels/locations?q=Grand+Plaza+Downtown,+New+York&limit=18 [32m200[0m 180.264 ms - 12[0m
+2025-12-08 13:24:12 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+2025-12-08 13:24:12 [[32minfo[39m]: Booking created: 28894ee5-53ec-4423-b302-6abb30d304ef for user: 6935b578646f9612f46eb4d4
+2025-12-08 13:24:12 [[33mwarn[39m]: Kafka disabled; skipping send to topic bookings.created
+[0mPOST /api/v1/bookings [32m201[0m 915.515 ms - 896[0m
+[0mGET /api/v1/payments [32m200[0m 259.014 ms - -[0m
+[0mGET /api/v1/payments [36m304[0m 181.915 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [32m200[0m 747.939 ms - -[0m
+[0mGET /api/v1/bookings?status=PENDING [36m304[0m 189.305 ms - -[0m
+2025-12-08 13:24:31 [[32minfo[39m]: Payment created: d99f4034-fa82-4bba-8463-c5ffaadf4032 for booking: 28894ee5-53ec-4423-b302-6abb30d304ef
+2025-12-08 13:24:31 [[33mwarn[39m]: Kafka disabled; skipping send to topic payments.created
+[0mPOST /api/v1/payments [32m201[0m 836.654 ms - 591[0m
+2025-12-08 13:24:32 [[32minfo[39m]: Payment d99f4034-fa82-4bba-8463-c5ffaadf4032 status updated to SUCCEEDED
+2025-12-08 13:24:32 [[33mwarn[39m]: Kafka disabled; skipping send to topic payments.succeeded
+2025-12-08 13:24:32 [[32minfo[39m]: Booking 28894ee5-53ec-4423-b302-6abb30d304ef status updated to CONFIRMED
+2025-12-08 13:24:32 [[33mwarn[39m]: Kafka disabled; skipping send to topic bookings.updated
+2025-12-08 13:24:32 [[33mwarn[39m]: Kafka disabled; skipping send to topic bookings.confirmed
+2025-12-08 13:24:32 [[32minfo[39m]: Booking 28894ee5-53ec-4423-b302-6abb30d304ef auto-confirmed after successful payment
+2025-12-08 13:24:32 [[32minfo[39m]: Payment d99f4034-fa82-4bba-8463-c5ffaadf4032 processed successfully: txn_1765229071934_iggetw1l1
+[0mPOST /api/v1/payments/d99f4034-fa82-4bba-8463-c5ffaadf4032/process [32m200[0m 1330.452 ms - 618[0m
+[0mGET /api/v1/payments [32m200[0m 228.492 ms - -[0m
+2025-12-08 13:24:34 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [32m200[0m 102.644 ms - -[0m
+2025-12-08 13:24:34 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [36m304[0m 99.124 ms - -[0m
+[0mGET /api/v1/owner/bookings [32m200[0m 346.190 ms - -[0m
+2025-12-08 13:25:28 [[32minfo[39m]: Booking 28894ee5-53ec-4423-b302-6abb30d304ef status updated to CANCELLED
+2025-12-08 13:25:28 [[33mwarn[39m]: Kafka disabled; skipping send to topic bookings.updated
+[0mPOST /api/v1/bookings/28894ee5-53ec-4423-b302-6abb30d304ef/cancel [32m200[0m 1253.594 ms - 928[0m
+2025-12-08 13:25:28 [[32minfo[39m]: Getting bookings for user 6935b578646f9612f46eb4d4
+[0mGET /api/v1/users/6935b578646f9612f46eb4d4/bookings [32m200[0m 748.039 ms - -[0m
+[0mGET /api/v1/owner/bookings [32m200[0m 396.341 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:26:50 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:26:50 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:26:50 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:26:50 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:26:50 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:26:50 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:26:50 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 13:27:46 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 13:27:46 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[0mGET /api/v1/owner/bookings [36m304[0m 2477.821 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:27:52 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:27:52 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:27:52 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:27:52 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:27:52 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:27:52 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:27:52 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 13:27:56 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 13:27:56 [[32minfo[39m]: PostgreSQL (Supabase Cloud) connection pool created
+[0mGET /api/v1/owner/bookings [36m304[0m 2402.367 ms - -[0m
+[0mGET /api/v1/owner/bookings [36m304[0m 376.485 ms - -[0m
+[0mGET /api/v1/owner/dashboard [32m200[0m 167.124 ms - 200[0m
+[0mGET /api/v1/owner/bookings [36m304[0m 1006.285 ms - -[0m
+[0mGET /api/v1/owner/dashboard [36m304[0m 222.551 ms - -[0m
+[0mGET /api/v1/owner/dashboard [36m304[0m 182.733 ms - -[0m
+2025-12-08 13:29:28 [[32minfo[39m]: === OWNER HOTELS REQUEST ===
+2025-12-08 13:29:28 [[32minfo[39m]: Owner ID: {"0":"6","1":"9","2":"3","3":"5","4":"9","5":"f","6":"f","7":"8","8":"c","9":"f","10":"d","11":"9","12":"1","13":"c","14":"7","15":"e","16":"e","17":"1","18":"0","19":"8","20":"3","21":"9","22":"0","23":"8"}
+2025-12-08 13:29:29 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 6 hotels
+2025-12-08 13:29:29 [[32minfo[39m]: Hotels: {"0":{"id":"HT-1765125799365","name":"Grand Plaza Downtown"},"1":{"id":"HT-10642","name":"Sunset Paradise Resort"},"2":{"id":"HT-10643","name":"Downtown Business Suites"},"3":{"id":"HT-10644","name":"Mountain View Lodge"},"4":{"id":"HT-1765173313481","name":"Beautiful Apartments"},"5":{"id":"HT-1765229092898","name":"Ranking Hotel"}}
+2025-12-08 13:29:29 [[32minfo[39m]: Sending response: {"0":"{","1":"\"","2":"i","3":"t","4":"e","5":"m","6":"s","7":"\"","8":":","9":"[","10":"{","11":"\"","12":"_","13":"i","14":"d","15":"\"","16":":","17":"\"","18":"H","19":"T","20":"-","21":"1","22":"7","23":"6","24":"5","25":"1","26":"2","27":"5","28":"7","29":"9","30":"9","31":"3","32":"6","33":"5","34":"\"","35":",","36":"\"","37":"i","38":"d","39":"\"","40":":","41":"\"","42":"H","43":"T","44":"-","45":"1","46":"7","47":"6","48":"5","49":"1","50":"2","51":"5","52":"7","53":"9","54":"9","55":"3","56":"6","57":"5","58":"\"","59":",","60":"\"","61":"n","62":"a","63":"m","64":"e","65":"\"","66":":","67":"\"","68":"G","69":"r","70":"a","71":"n","72":"d","73":" ","74":"P","75":"l","76":"a","77":"z","78":"a","79":" ","80":"D","81":"o","82":"w","83":"n","84":"t","85":"o","86":"w","87":"n","88":"\"","89":",","90":"\"","91":"c","92":"i","93":"t","94":"y","95":"\"","96":":","97":"\"","98":"N","99":"e","100":"w","101":" ","102":"Y","103":"o","104":"r","105":"k","106":"\"","107":",","108":"\"","109":"a","110":"d","111":"d","112":"r","113":"e","114":"s","115":"s","116":"\"","117":":","118":"\"","119":"1","120":"2","121":"3","122":" ","123":"M","124":"a","125":"d","126":"i","127":"s","128":"o","129":"n","130":" ","131":"A","132":"v","133":"e","134":"n","135":"u","136":"e","137":",","138":" ","139":"M","140":"a","141":"n","142":"h","143":"a","144":"t","145":"t","146":"a","147":"n","148":",","149":" ","150":"N","151":"Y","152":" ","153":"1","154":"0","155":"0","156":"1","157":"0","158":"\"","159":",","160":"\"","161":"d","162":"e","163":"s","164":"c","165":"r","166":"i","167":"p","168":"t","169":"i","170":"o","171":"n","172":"\"","173":":","174":"\"","175":"L","176":"u","177":"x","178":"u","179":"r","180":"i","181":"o","182":"u","183":"s","184":" ","185":"5","186":"-","187":"s","188":"t","189":"a","190":"r","191":" ","192":"h","193":"o","194":"t","195":"e","196":"l","197":" ","198":"i","199":"n"}
+[0mGET /api/v1/owner/hotels [32m200[0m 103.404 ms - -[0m
+[0mGET /api/v1/owner/dashboard [36m304[0m 163.308 ms - -[0m
+2025-12-08 13:29:50 [[32minfo[39m]: === OWNER HOTELS REQUEST ===
+2025-12-08 13:29:50 [[32minfo[39m]: Owner ID: {"0":"6","1":"9","2":"3","3":"5","4":"9","5":"f","6":"f","7":"8","8":"c","9":"f","10":"d","11":"9","12":"1","13":"c","14":"7","15":"e","16":"e","17":"1","18":"0","19":"8","20":"3","21":"9","22":"0","23":"8"}
+2025-12-08 13:29:50 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 6 hotels
+2025-12-08 13:29:50 [[32minfo[39m]: Hotels: {"0":{"id":"HT-1765125799365","name":"Grand Plaza Downtown"},"1":{"id":"HT-10642","name":"Sunset Paradise Resort"},"2":{"id":"HT-10643","name":"Downtown Business Suites"},"3":{"id":"HT-10644","name":"Mountain View Lodge"},"4":{"id":"HT-1765173313481","name":"Beautiful Apartments"},"5":{"id":"HT-1765229092898","name":"Ranking Hotel"}}
+2025-12-08 13:29:50 [[32minfo[39m]: Sending response: {"0":"{","1":"\"","2":"i","3":"t","4":"e","5":"m","6":"s","7":"\"","8":":","9":"[","10":"{","11":"\"","12":"_","13":"i","14":"d","15":"\"","16":":","17":"\"","18":"H","19":"T","20":"-","21":"1","22":"7","23":"6","24":"5","25":"1","26":"2","27":"5","28":"7","29":"9","30":"9","31":"3","32":"6","33":"5","34":"\"","35":",","36":"\"","37":"i","38":"d","39":"\"","40":":","41":"\"","42":"H","43":"T","44":"-","45":"1","46":"7","47":"6","48":"5","49":"1","50":"2","51":"5","52":"7","53":"9","54":"9","55":"3","56":"6","57":"5","58":"\"","59":",","60":"\"","61":"n","62":"a","63":"m","64":"e","65":"\"","66":":","67":"\"","68":"G","69":"r","70":"a","71":"n","72":"d","73":" ","74":"P","75":"l","76":"a","77":"z","78":"a","79":" ","80":"D","81":"o","82":"w","83":"n","84":"t","85":"o","86":"w","87":"n","88":"\"","89":",","90":"\"","91":"c","92":"i","93":"t","94":"y","95":"\"","96":":","97":"\"","98":"N","99":"e","100":"w","101":" ","102":"Y","103":"o","104":"r","105":"k","106":"\"","107":",","108":"\"","109":"a","110":"d","111":"d","112":"r","113":"e","114":"s","115":"s","116":"\"","117":":","118":"\"","119":"1","120":"2","121":"3","122":" ","123":"M","124":"a","125":"d","126":"i","127":"s","128":"o","129":"n","130":" ","131":"A","132":"v","133":"e","134":"n","135":"u","136":"e","137":",","138":" ","139":"M","140":"a","141":"n","142":"h","143":"a","144":"t","145":"t","146":"a","147":"n","148":",","149":" ","150":"N","151":"Y","152":" ","153":"1","154":"0","155":"0","156":"1","157":"0","158":"\"","159":",","160":"\"","161":"d","162":"e","163":"s","164":"c","165":"r","166":"i","167":"p","168":"t","169":"i","170":"o","171":"n","172":"\"","173":":","174":"\"","175":"L","176":"u","177":"x","178":"u","179":"r","180":"i","181":"o","182":"u","183":"s","184":" ","185":"5","186":"-","187":"s","188":"t","189":"a","190":"r","191":" ","192":"h","193":"o","194":"t","195":"e","196":"l","197":" ","198":"i","199":"n"}
+[0mGET /api/v1/owner/hotels [36m304[0m 85.201 ms - -[0m
+[0mGET /api/v1/owner/bookings [36m304[0m 809.899 ms - -[0m
+[0mGET /api/v1/owner/bookings [36m304[0m 278.511 ms - -[0m
+[0mGET /api/v1/owner/dashboard [36m304[0m 746.556 ms - -[0m
+[0mGET /api/v1/owner/dashboard [36m304[0m 711.374 ms - -[0m
+[0mGET /api/v1/owner/bookings [36m304[0m 881.652 ms - -[0m
+[0mGET /api/v1/owner/bookings [36m304[0m 280.661 ms - -[0m
+2025-12-08 13:32:22 [[32minfo[39m]: === getPropertyClicks ===
+2025-12-08 13:32:22 [[32minfo[39m]: User: {"id":"69359ff8cfd91c7ee1083908","email":"OwnerTest@gmail.com","profileType":"owner","role":"user"}
+2025-12-08 13:32:22 [[32minfo[39m]: Owner filter: {"ownerId":"69359ff8cfd91c7ee1083908","isOwner":true}
+2025-12-08 13:32:22 [[32minfo[39m]: getPropertyClicks called with filters: {"startDate":"2025-11-08","endDate":"2025-12-09","limit":20,"ownerId":"69359ff8cfd91c7ee1083908"}
+2025-12-08 13:32:22 [[32minfo[39m]: Filtering by ownerId: {"0":"6","1":"9","2":"3","3":"5","4":"9","5":"f","6":"f","7":"8","8":"c","9":"f","10":"d","11":"9","12":"1","13":"c","14":"7","15":"e","16":"e","17":"1","18":"0","19":"8","20":"3","21":"9","22":"0","23":"8"}
+2025-12-08 13:32:22 [[32minfo[39m]: === OWNER HOTELS REQUEST ===
+2025-12-08 13:32:22 [[32minfo[39m]: Owner ID: {"0":"6","1":"9","2":"3","3":"5","4":"9","5":"f","6":"f","7":"8","8":"c","9":"f","10":"d","11":"9","12":"1","13":"c","14":"7","15":"e","16":"e","17":"1","18":"0","19":"8","20":"3","21":"9","22":"0","23":"8"}
+2025-12-08 13:32:22 [[32minfo[39m]: === getPropertyReviews ===
+2025-12-08 13:32:22 [[32minfo[39m]: User: {"id":"69359ff8cfd91c7ee1083908","email":"OwnerTest@gmail.com","profileType":"owner"}
+2025-12-08 13:32:22 [[32minfo[39m]: Owner filter: {"ownerId":"69359ff8cfd91c7ee1083908","isOwner":true}
+[0mGET /api/v1/analytics/clicks/per-page?startDate=2025-11-08&endDate=2025-12-09&action=click [32m200[0m 248.877 ms - 746[0m
+2025-12-08 13:32:22 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 3 cars
+[0mGET /api/v1/owner/cars [32m200[0m 325.251 ms - -[0m
+[0mGET /api/v1/analytics/bidding?startDate=2025-11-08&endDate=2025-12-09 [32m200[0m 497.117 ms - -[0m
+2025-12-08 13:32:23 [[32minfo[39m]: Owner property IDs: {"0":"HT-1765125799365","1":"HT-10642","2":"HT-10643","3":"HT-10644","4":"HT-1765173313481","5":"HT-1765229092898","6":"CR-5630","7":"CR-5631","8":"CR-5632"}
+2025-12-08 13:32:23 [[32minfo[39m]: Filtering clicks to owner properties: {"0":"HT-1765125799365","1":"HT-10642","2":"HT-10643","3":"HT-10644","4":"HT-1765173313481","5":"HT-1765229092898","6":"CR-5630","7":"CR-5631","8":"CR-5632"}
+2025-12-08 13:32:23 [[32minfo[39m]: Owner 69359ff8cfd91c7ee1083908 has 6 hotels
+2025-12-08 13:32:23 [[32minfo[39m]: Hotels: {"0":{"id":"HT-1765125799365","name":"Grand Plaza Downtown"},"1":{"id":"HT-10642","name":"Sunset Paradise Resort"},"2":{"id":"HT-10643","name":"Downtown Business Suites"},"3":{"id":"HT-10644","name":"Mountain View Lodge"},"4":{"id":"HT-1765173313481","name":"Beautiful Apartments"},"5":{"id":"HT-1765229092898","name":"Ranking Hotel"}}
+2025-12-08 13:32:23 [[32minfo[39m]: Sending response: {"0":"{","1":"\"","2":"i","3":"t","4":"e","5":"m","6":"s","7":"\"","8":":","9":"[","10":"{","11":"\"","12":"_","13":"i","14":"d","15":"\"","16":":","17":"\"","18":"H","19":"T","20":"-","21":"1","22":"7","23":"6","24":"5","25":"1","26":"2","27":"5","28":"7","29":"9","30":"9","31":"3","32":"6","33":"5","34":"\"","35":",","36":"\"","37":"i","38":"d","39":"\"","40":":","41":"\"","42":"H","43":"T","44":"-","45":"1","46":"7","47":"6","48":"5","49":"1","50":"2","51":"5","52":"7","53":"9","54":"9","55":"3","56":"6","57":"5","58":"\"","59":",","60":"\"","61":"n","62":"a","63":"m","64":"e","65":"\"","66":":","67":"\"","68":"G","69":"r","70":"a","71":"n","72":"d","73":" ","74":"P","75":"l","76":"a","77":"z","78":"a","79":" ","80":"D","81":"o","82":"w","83":"n","84":"t","85":"o","86":"w","87":"n","88":"\"","89":",","90":"\"","91":"c","92":"i","93":"t","94":"y","95":"\"","96":":","97":"\"","98":"N","99":"e","100":"w","101":" ","102":"Y","103":"o","104":"r","105":"k","106":"\"","107":",","108":"\"","109":"a","110":"d","111":"d","112":"r","113":"e","114":"s","115":"s","116":"\"","117":":","118":"\"","119":"1","120":"2","121":"3","122":" ","123":"M","124":"a","125":"d","126":"i","127":"s","128":"o","129":"n","130":" ","131":"A","132":"v","133":"e","134":"n","135":"u","136":"e","137":",","138":" ","139":"M","140":"a","141":"n","142":"h","143":"a","144":"t","145":"t","146":"a","147":"n","148":",","149":" ","150":"N","151":"Y","152":" ","153":"1","154":"0","155":"0","156":"1","157":"0","158":"\"","159":",","160":"\"","161":"d","162":"e","163":"s","164":"c","165":"r","166":"i","167":"p","168":"t","169":"i","170":"o","171":"n","172":"\"","173":":","174":"\"","175":"L","176":"u","177":"x","178":"u","179":"r","180":"i","181":"o","182":"u","183":"s","184":" ","185":"5","186":"-","187":"s","188":"t","189":"a","190":"r","191":" ","192":"h","193":"o","194":"t","195":"e","196":"l","197":" ","198":"i","199":"n"}
+[0mGET /api/v1/owner/hotels [36m304[0m 958.180 ms - -[0m
+2025-12-08 13:32:23 [[32minfo[39m]: Result: {"itemCount":3}
+[0mGET /api/v1/analytics/clicks/properties?startDate=2025-11-08&endDate=2025-12-09&limit=20 [32m200[0m 1070.052 ms - 373[0m
+2025-12-08 13:32:23 [[34mdebug[39m]: Cache disabled, skipping get
+[0mGET /api/v1/analytics/reviews/properties?startDate=2025-11-08&endDate=2025-12-09&limit=20 [32m200[0m 1196.512 ms - 273[0m
+2025-12-08 13:32:23 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/HT-1765125799365 [36m304[0m 127.761 ms - -[0m
+2025-12-08 13:32:23 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:32:23 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/HT-10642 [36m304[0m 94.010 ms - -[0m
+2025-12-08 13:32:23 [[34mdebug[39m]: Cache disabled, skipping get
+2025-12-08 13:32:23 [[34mdebug[39m]: Cache disabled, skipping set
+[0mGET /api/v1/listings/hotels/HT-10643 [36m304[0m 159.383 ms - -[0m
+[0mPOST /api/v1/auth/logout [32m200[0m 0.636 ms - 54[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:35:50 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:35:50 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:35:50 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:35:50 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:35:50 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:35:50 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:35:50 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+Starting backend server...
+Loaded .env file from: /Users/vidushi/PycharmProjects/Kayak-clone/backend/.env
+2025-12-08 13:35:52 [[32minfo[39m]: Firebase Admin initialized
+2025-12-08 13:35:52 [[33mwarn[39m]: Failed to initialize WebSocket server: Cannot access 'server' before initialization {"stack":"ReferenceError: Cannot access 'server' before initialization\n    at file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/server.js:53:23\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+2025-12-08 13:35:52 [[33mwarn[39m]: Kafka disabled via KAFKA_ENABLED=false
+2025-12-08 13:35:52 [[33mwarn[39m]: Kafka not configured. Event streaming features will be disabled.
+2025-12-08 13:35:52 [[32minfo[39m]: Redis session store initialized
+Server started successfully on port 3000
+2025-12-08 13:35:52 [[32minfo[39m]: Server running in development mode on port 3000
+2025-12-08 13:35:52 [[32minfo[39m]: Health check: http://localhost:3000/health/live
+2025-12-08 13:35:59 [[32minfo[39m]: MongoDB connected successfully
+2025-12-08 13:35:59 [[31merror[39m]: Registration error: User with this email already exists {"stack":"Error: User with this email already exists\n    at Module.register (file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/auth.service.js:113:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async register (file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/controllers/auth.controller.js:8:20)"}
+[0mPOST /api/v1/auth/register [33m409[0m 1422.351 ms - 67[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node src/server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+(node:13241) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] starting `node src/server.js`[39m
+file:///Users/vidushi/PycharmProjects/Kayak-clone/backend/src/services/users.service.js:142
+  const pool = getPostgresPool();
+        ^
+
+SyntaxError: Identifier 'pool' has already been declared
+    at compileSourceTextModule (node:internal/modules/esm/utils:305:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:111:18)
+    at #translate (node:internal/modules/esm/loader:467:20)
+    at afterLoad (node:internal/modules/esm/loader:523:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:528:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36)
+    at afterResolve (node:internal/modules/esm/loader:618:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:624:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:228:17)
+
+Node.js v25.2.1
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
