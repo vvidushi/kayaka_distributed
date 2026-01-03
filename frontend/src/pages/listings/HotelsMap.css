@@ -1,0 +1,10 @@
+/* Custom styles for hotel map markers */
+.custom-price-marker {
+  background: transparent;
+  border: none;
+}
+
+.custom-price-marker div {
+  pointer-events: none;
+}
+

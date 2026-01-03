@@ -1,0 +1,53 @@
+# ============================================
+# Terraform Configuration Values (TEMPLATE)
+# Copy this file to terraform.tfvars and fill in your values
+# ============================================
+
+# Project
+project     = "kayak"
+environment = "dev"
+region      = "us-east-1"
+
+# AWS Profile
+aws_profile    = "default"
+aws_account_id = "123456789012"
+
+# Network Configuration
+vpc_id = "vpc-xxxxxxxxxxxxxxxxx"
+
+private_subnet_ids = [
+  "subnet-xxxxxxxxxxxxxxxxx",
+  "subnet-xxxxxxxxxxxxxxxxx",
+  "subnet-xxxxxxxxxxxxxxxxx"
+]
+
+public_subnet_ids = [
+  "subnet-xxxxxxxxxxxxxxxxx",
+  "subnet-xxxxxxxxxxxxxxxxx",
+  "subnet-xxxxxxxxxxxxxxxxx"
+]
+
+# EKS Configuration
+cluster_version = "1.28"
+
+# Node Group
+node_instance_types = ["t3.small"]
+node_desired_size   = 1
+node_min_size       = 1
+node_max_size       = 2
+node_disk_size      = 20
+
+# Application Configuration
+frontend_replicas = 2
+backend_replicas  = 2
+agent_replicas    = 1
+
+frontend_image_tag = "latest"
+backend_image_tag  = "latest"
+agent_image_tag    = "latest"
+
+# Tags
+tags = {
+  Team        = "Platform"
+  Application = "Kayak"
+}
