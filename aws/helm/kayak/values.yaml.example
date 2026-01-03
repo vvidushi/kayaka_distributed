@@ -1,0 +1,344 @@
+# ============================================
+# Global Configuration
+# ============================================
+global:
+  project: kayak
+  environment: dev
+  region: us-east-1
+  awsAccountId: "779926948199"
+  
+  # Image Registry
+  imageRegistry: "779926948199.dkr.ecr.us-east-1.amazonaws.com"
+  imagePullPolicy: Always
+  
+  # Ingress
+  ingress:
+    enabled: true
+    className: alb
+    domain: kayak-dev.example.com
+    annotations:
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/target-type: ip
+      alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+      alb.ingress.kubernetes.io/healthcheck-path: /health
+      alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
+      alb.ingress.kubernetes.io/healthcheck-interval-seconds: "30"
+      alb.ingress.kubernetes.io/healthcheck-timeout-seconds: "5"
+      alb.ingress.kubernetes.io/healthy-threshold-count: "2"
+      alb.ingress.kubernetes.io/unhealthy-threshold-count: "3"
+      alb.ingress.kubernetes.io/success-codes: "200"
+      alb.ingress.kubernetes.io/subnets: subnet-012bcfd56363abe00,subnet-0171b6874d9204109,subnet-025d2dcd1925d6042
+
+# ============================================
+# Frontend Service
+# ============================================
+frontend:
+  enabled: true
+  name: frontend
+  replicaCount: 1
+  
+  image:
+    repository: kayak-dev-frontend
+    tag: latest
+  
+  service:
+    type: ClusterIP
+    port: 80
+    targetPort: 80
+  
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+  
+  autoscaling:
+    enabled: false
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+  
+  env:
+    - name: VITE_API_BASE_URL
+      value: "/api"
+    - name: VITE_API_VERSION
+      value: "v1"
+    - name: VITE_FIREBASE_API_KEY
+      value: "AIzaSyD1atjecmNeoJ2nnDT67GBEFypB94K2KUU"
+    - name: VITE_FIREBASE_AUTH_DOMAIN
+      value: "firegram-1r.firebaseapp.com"
+    - name: VITE_FIREBASE_PROJECT_ID
+      value: "firegram-1r"
+    - name: VITE_FIREBASE_STORAGE_BUCKET
+      value: "firegram-1r.appspot.com"
+    - name: VITE_FIREBASE_MESSAGING_SENDER_ID
+      value: "1094311202182"
+    - name: VITE_FIREBASE_APP_ID
+      value: "1:1094311202182:web:72525e6bee4e9bd8b07007"
+
+# ============================================
+# API Gateway Service
+# ============================================
+apiGateway:
+  enabled: true
+  name: api-gateway
+  replicaCount: 1
+  
+  image:
+    repository: kayak-dev-backend
+    tag: latest
+  
+  service:
+    type: ClusterIP
+    port: 3000
+    targetPort: 3000
+  
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+  
+  envFrom:
+    - secretRef:
+        name: kayak-backend-secrets
+    - configMapRef:
+        name: kayak-backend-config
+
+# ============================================
+# Listings Service (Flights, Hotels, Cars)
+# ============================================
+listingsService:
+  enabled: true
+  name: listings-service
+  replicaCount: 1
+  
+  image:
+    repository: kayak-dev-backend
+    tag: latest
+  
+  service:
+    type: ClusterIP
+    port: 3001
+    targetPort: 3001
+  
+  resources:
+    requests:
+      cpu: 300m
+      memory: 512Mi
+    limits:
+      cpu: 1500m
+      memory: 2Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 15
+    targetCPUUtilizationPercentage: 70
+  
+  env:
+    - name: SERVICE_NAME
+      value: "listings"
+    - name: PORT
+      value: "3001"
+  
+  envFrom:
+    - secretRef:
+        name: kayak-backend-secrets
+    - configMapRef:
+        name: kayak-backend-config
+
+# ============================================
+# Bookings Service
+# ============================================
+bookingsService:
+  enabled: true
+  name: bookings-service
+  replicaCount: 1
+  
+  image:
+    repository: kayak-dev-backend
+    tag: latest
+  
+  service:
+    type: ClusterIP
+    port: 3002
+    targetPort: 3002
+  
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+  
+  env:
+    - name: SERVICE_NAME
+      value: "bookings"
+    - name: PORT
+      value: "3002"
+  
+  envFrom:
+    - secretRef:
+        name: kayak-backend-secrets
+    - configMapRef:
+        name: kayak-backend-config
+
+# ============================================
+# Payments Service
+# ============================================
+paymentsService:
+  enabled: true
+  name: payments-service
+  replicaCount: 1
+  
+  image:
+    repository: kayak-dev-backend
+    tag: latest
+  
+  service:
+    type: ClusterIP
+    port: 3003
+    targetPort: 3003
+  
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 800m
+      memory: 512Mi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 8
+    targetCPUUtilizationPercentage: 70
+  
+  env:
+    - name: SERVICE_NAME
+      value: "payments"
+    - name: PORT
+      value: "3003"
+  
+  envFrom:
+    - secretRef:
+        name: kayak-backend-secrets
+    - configMapRef:
+        name: kayak-backend-config
+
+# ============================================
+# AI Agent Service (Concierge)
+# ============================================
+aiAgent:
+  enabled: true
+  name: ai-agent
+  replicaCount: 1
+  
+  image:
+    repository: kayak-dev-agent
+    tag: latest
+  
+  service:
+    type: ClusterIP
+    port: 8000
+    targetPort: 8000
+  
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 2000m
+      memory: 4Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 75
+  
+  envFrom:
+    - secretRef:
+        name: kayak-agent-secrets
+    - configMapRef:
+        name: kayak-agent-config
+
+# ============================================
+# ConfigMaps
+# ============================================
+configMaps:
+  backend:
+    NODE_ENV: "production"
+    API_VERSION: "v1"
+    CORS_ORIGIN: "http://k8s-kayakdev-kayaking-98ae61f6c8-1320506053.us-east-1.elb.amazonaws.com,https://kayak-dev.example.com"
+    LOG_LEVEL: "info"
+    LOG_DIR: "/var/log/kayak"
+    KAFKA_ENABLED: "false"
+    CACHE_ENABLED: "true"
+    REDIS_HOST: "redis-19566.c90.us-east-1-3.ec2.cloud.redislabs.com"
+    REDIS_PORT: "19566"
+    KAFKA_HOST: "kafka-23b69111-shravan-3151.h.aivencloud.com"
+    KAFKA_PORT: "12310"
+    KAFKA_CLIENT_ID: "kayak-backend"
+    AI_AGENT_URL: "http://ai-agent:8000"
+  
+  agent:
+    ENV: "production"
+    LOG_LEVEL: "INFO"
+    MONGODB_DB: "kayak"
+    TAVILY_ENABLED: "true"
+    LANGCHAIN_TRACING_V2: "true"
+    LANGCHAIN_PROJECT: "kayak-concierge"
+    LANGCHAIN_ENDPOINT: "https://api.smith.langchain.com"
+    OPENAI_MODEL: "gpt-4o-mini"
+    SUPABASE_URL: "https://gqagedimcqmvevfgihdp.supabase.co"
+    SUPABASE_MCP_URL: "https://mcp.supabase.com/mcp?project_ref=gqagedimcqmvevfgihdp"
+
+# ============================================
+# Secrets (Will be created separately via kubectl)
+# ============================================
+secrets:
+  backend:
+    DATABASE_URL: "YOUR_DATABASE_URL"
+    MONGODB_URI: "YOUR_MONGODB_URI"
+    REDIS_URL: "YOUR_REDIS_URL"
+    JWT_SECRET: "YOUR_JWT_SECRET"
+    JWT_EXPIRES_IN: "24h"
+    SESSION_SECRET: "YOUR_SESSION_SECRET"
+    SESSION_MAX_AGE: "86400000"
+    FIREBASE_SERVICE_ACCOUNT: 'YOUR_FIREBASE_SERVICE_ACCOUNT_JSON'
+    FIREBASE_STORAGE_BUCKET: "YOUR_FIREBASE_STORAGE_BUCKET"
+    KAFKA_SSL_CA_PATH: "/kafka/ca.pem"
+    KAFKA_SSL_CERT_PATH: "/kafka/service.cert"
+    KAFKA_SSL_KEY_PATH: "/kafka/service.key"
+  
+  agent:
+    OPENAI_API_KEY: "YOUR_OPENAI_API_KEY"
+    TAVILY_API_KEY: "YOUR_TAVILY_API_KEY"
+    WEATHER_API_KEY: "YOUR_WEATHER_API_KEY"
+    LANGSMITH_API_KEY: "YOUR_LANGSMITH_API_KEY"
+    LANGCHAIN_API_KEY: "YOUR_LANGCHAIN_API_KEY"
+    SUPABASE_ACCESS_TOKEN: "YOUR_SUPABASE_ACCESS_TOKEN"
+    SUPABASE_SERVICE_ROLE_KEY: "YOUR_SUPABASE_SERVICE_ROLE_KEY"
+    DATABASE_URL: "YOUR_DATABASE_URL"
+    SUPABASE_DATABASE_URL: "YOUR_SUPABASE_DATABASE_URL"
+    MONGODB_URI: "YOUR_MONGODB_URI"
+    REDIS_URL: "YOUR_REDIS_URL"

@@ -1,0 +1,46 @@
+# Git
+.git
+.gitignore
+
+# Dependencies
+node_modules
+npm-debug.log
+
+# Environment files (will be mounted or passed via env_file)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+
+# IDE
+.vscode
+.idea
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+*.test.js
+*.spec.js
+__tests__
+coverage
+
+# Documentation
+docs
+*.md
+!README.md
+
+# Docker files
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Development scripts
+scripts/msk-tunnel.sh
+scripts/check-kafka-access.sh
+

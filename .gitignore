@@ -1,0 +1,100 @@
+*.pdf
+
+# Environment files with secrets
+.env
+.env.local
+.env.*
+.env.example
+scripts/.env
+backend/.env
+frontend/.env
+ai-agent/.env
+
+# Log files (may contain sensitive information)
+logs/
+*.log
+*.log.*
+
+# Helm values with secrets
+aws/helm/kayak/values.yaml
+**/values.yaml
+helm/*/values.yaml
+
+# Credentials and sensitive data
+**/credentials.json
+**/*password*
+**/*secret*
+**/*token*
+**/*api_key*
+**/*apikey*
+id_rsa
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+
+# Database connection strings and URLs
+**/*database*.json
+**/*db*.json
+
+# Firebase service account files
+**/firebase-service-account.json
+**/serviceAccountKey.json
+**/*service-account*.json
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfr
+*.tfvars
+.terraform.lock.hcl
+terraform.rc
+terraform.d/
+
+# AWS
+.aws/
+*.aws
+
+# Kubernetes secrets
+**/secrets.yaml
+**/secrets.yml
+**/*secret*.yaml
+**/*secret*.yml
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json.backup
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# OS files
+Thumbs.db
+.DS_Store

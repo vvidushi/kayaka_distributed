@@ -1,0 +1,67 @@
+{{- if .Values.aiAgent.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.aiAgent.name }}
+  namespace: {{ .Values.global.project }}-{{ .Values.global.environment }}
+  labels:
+    {{- include "kayak.labels" . | nindent 4 }}
+    app.kubernetes.io/component: ai-agent
+spec:
+  replicas: {{ .Values.aiAgent.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "kayak.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: ai-agent
+  template:
+    metadata:
+      labels:
+        {{- include "kayak.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: ai-agent
+    spec:
+      containers:
+      - name: {{ .Values.aiAgent.name }}
+        image: {{ include "kayak.image" (dict "root" . "image" .Values.aiAgent.image) }}
+        imagePullPolicy: {{ .Values.global.imagePullPolicy }}
+        ports:
+        - name: http
+          containerPort: {{ .Values.aiAgent.service.targetPort }}
+          protocol: TCP
+        envFrom:
+        {{- range .Values.aiAgent.envFrom }}
+        - {{ . | toYaml | nindent 10 | trim }}
+        {{- end }}
+        resources:
+          {{- toYaml .Values.aiAgent.resources | nindent 10 }}
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: http
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.aiAgent.name }}
+  namespace: {{ .Values.global.project }}-{{ .Values.global.environment }}
+  labels:
+    {{- include "kayak.labels" . | nindent 4 }}
+    app.kubernetes.io/component: ai-agent
+spec:
+  type: {{ .Values.aiAgent.service.type }}
+  ports:
+  - port: {{ .Values.aiAgent.service.port }}
+    targetPort: {{ .Values.aiAgent.service.targetPort }}
+    protocol: TCP
+    name: http
+  selector:
+    {{- include "kayak.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/component: ai-agent
+{{- end }}

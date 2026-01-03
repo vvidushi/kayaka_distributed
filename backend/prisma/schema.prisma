@@ -1,0 +1,110 @@
+// Prisma Schema for Kayak Platform
+// This schema reflects the current database structure
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                    String    @id @db.Text
+  ssn                   String?   @unique @db.VarChar(11)
+  firstName             String    @map("first_name") @db.VarChar(80)
+  lastName              String    @map("last_name") @db.VarChar(80)
+  email                 String    @unique @db.VarChar(255)
+  passwordHash          String?   @map("password_hash") @db.VarChar(255)
+  phoneNumber           String    @map("phone_number") @db.VarChar(15)
+  addressLine1          String    @map("address_line1") @db.VarChar(255)
+  addressLine2          String?   @map("address_line2") @db.VarChar(255)
+  addressCity           String    @map("address_city") @db.VarChar(120)
+  addressState          String    @map("address_state") @db.Char(2)
+  addressZipCode        String    @map("address_zip_code") @db.VarChar(10)
+  profileImageUrl       String?   @map("profile_image_url") @db.VarChar(500)
+  profileType           String    @default("traveler") @map("profile_type") @db.VarChar(20)
+  ssnVerifiedAt         DateTime? @map("ssn_verified_at") @db.Timestamp
+  partnerDetails        Json?     @map("partner_details")
+  role                  String    @default("user") @db.VarChar(20)
+  loyaltyTier           String    @default("none") @map("loyalty_tier") @db.VarChar(20)
+  lastLogin             DateTime? @map("last_login") @db.Timestamp
+  passwordResetToken    String?   @map("password_reset_token") @db.VarChar(255)
+  passwordResetExpires  DateTime? @map("password_reset_expires") @db.Timestamp
+  createdAt             DateTime  @default(now()) @map("created_at") @db.Timestamp
+  updatedAt             DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamp
+
+  // Note: Relations commented out because user_id fields are TEXT (MongoDB ObjectIds)
+  // and Prisma doesn't support foreign keys on TEXT columns
+  // bookings              Booking[]
+  // payments              Payment[]
+  // reviews               Review[]
+
+  @@index([email], name: "idx_users_email")
+  @@index([addressState], name: "idx_users_state")
+  @@map("users")
+}
+
+model Booking {
+  id            String    @id @default(uuid()) @db.Uuid
+  userId        String    @map("user_id") @db.Text
+  bookingType   String    @map("booking_type") @db.VarChar(20)
+  status        String    @default("PENDING") @db.VarChar(20)
+  priceAmount   Decimal?  @map("price_amount") @db.Decimal(10, 2)
+  priceCurrency String?  @default("USD") @map("price_currency") @db.Char(3)
+  itinerary     Json?
+  metadata      Json?
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamp
+  updatedAt     DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamp
+
+  // Note: userId is TEXT (MongoDB ObjectId), so no foreign key constraint
+  // user          User      @relation(fields: [userId], references: [id])
+  payments      Payment[]
+
+  @@index([userId], name: "idx_bookings_user_id")
+  @@index([status], name: "idx_bookings_status")
+  @@map("bookings")
+}
+
+model Payment {
+  id                  String    @id @default(uuid()) @db.Uuid
+  bookingId           String    @map("booking_id") @db.Uuid
+  userId              String    @map("user_id") @db.Text
+  status              String    @default("PENDING") @db.VarChar(20)
+  amount              Decimal   @db.Decimal(10, 2)
+  currency            String    @default("USD") @db.Char(3)
+  transactionReference String?  @map("transaction_reference") @db.VarChar(255)
+  invoiceUrl          String?   @map("invoice_url") @db.VarChar(500)
+  idempotencyKey      String?   @unique @map("idempotency_key") @db.VarChar(255)
+  metadata            Json      @default("{}")
+  createdAt           DateTime  @default(now()) @map("created_at") @db.Timestamp
+  updatedAt           DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamp
+
+  booking             Booking   @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  // Note: userId is TEXT (MongoDB ObjectId), so no foreign key constraint
+  // user                User      @relation(fields: [userId], references: [id])
+
+  @@index([bookingId], name: "idx_payments_booking_id")
+  @@index([userId], name: "idx_payments_user_id")
+  @@index([idempotencyKey], name: "idx_payments_idempotency_key")
+  @@index([metadata(ops: JsonbPathOps)], type: Gin, name: "idx_payments_metadata")
+  @@map("payments")
+}
+
+model Review {
+  id          String    @id @default(uuid()) @db.Uuid
+  userId      String    @map("user_id") @db.Text
+  listingType String    @map("listing_type") @db.VarChar(20)
+  listingId   String    @map("listing_id") @db.VarChar(100)
+  rating      Int?
+  title       String?   @db.VarChar(120)
+  body        String?   @db.Text
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamp
+
+  // Note: userId is TEXT (MongoDB ObjectId), so no foreign key constraint
+  // user        User      @relation(fields: [userId], references: [id])
+
+  @@map("reviews")
+}
+

@@ -1,0 +1,163 @@
+# Kafka Topics Configuration for Kayak Platform
+# This file defines all Kafka topics used in the application
+# 
+# Topics are organized by domain:
+# - Booking Events: booking lifecycle events
+# - Payment Events: payment processing events
+# - Inventory Events: listing inventory changes
+# - Deal Events: deal identification and tagging
+# - Watch Events: price/inventory watch triggers
+#
+# Usage:
+#   node scripts/create-kafka-topics.js          # Create all topics
+#   node scripts/create-kafka-topics.js --dry-run # Preview without creating
+#   node scripts/create-kafka-topics.js --list   # List existing topics
+
+topics:
+  # ============================================
+  # Booking Events
+  # ============================================
+  - name: bookings.created
+    partitions: 3
+    replication: 2
+    retention_ms: 604800000  # 7 days
+    description: "Published when a new booking is created"
+    consumers:
+      - booking-status-group
+    
+  - name: bookings.updated
+    partitions: 3
+    replication: 2
+    retention_ms: 604800000  # 7 days
+    description: "Published when a booking is updated"
+    consumers:
+      - booking-status-group
+      - analytics-group
+    
+  - name: bookings.confirmed
+    partitions: 3
+    replication: 2
+    retention_ms: 604800000  # 7 days
+    description: "Published when a booking is confirmed"
+    consumers:
+      - booking-status-group
+    
+  - name: bookings.cancelled
+    partitions: 3
+    replication: 2
+    retention_ms: 604800000  # 7 days
+    description: "Published when a booking is cancelled"
+    consumers:
+      - booking-status-group
+
+  # ============================================
+  # Payment Events
+  # ============================================
+  - name: payments.created
+    partitions: 3
+    replication: 2
+    retention_ms: 2592000000  # 30 days
+    description: "Published when a payment is initiated"
+    consumers:
+      - payment-confirmation-group
+      - analytics-group
+      - inventory-update-group
+    
+  - name: payments.succeeded
+    partitions: 3
+    replication: 2
+    retention_ms: 2592000000  # 30 days
+    description: "Published when a payment succeeds"
+    consumers:
+      - payment-confirmation-group
+      - notification-group
+      - inventory-update-group
+    
+  - name: payments.failed
+    partitions: 3
+    replication: 2
+    retention_ms: 2592000000  # 30 days
+    description: "Published when a payment fails"
+    consumers:
+      - payment-confirmation-group
+    
+  - name: payments.refunded
+    partitions: 3
+    replication: 2
+    retention_ms: 2592000000  # 30 days
+    description: "Published when a payment is refunded"
+    consumers:
+      - payment-confirmation-group
+
+  # ============================================
+  # Inventory Events
+  # ============================================
+  - name: inventory.updated
+    partitions: 3
+    replication: 2
+    retention_ms: 604800000  # 7 days
+    description: "Published when inventory (flights/hotels/cars) is updated"
+    consumers:
+      - watch-trigger-group
+      - inventory-update-group
+      - notification-group
+
+  # ============================================
+  # Deal Events
+  # ============================================
+  - name: deals.tagged
+    partitions: 2
+    replication: 2
+    retention_ms: 604800000  # 7 days
+    description: "Published when a deal is tagged or identified"
+    consumers:
+      - deal-event-group
+
+  # ============================================
+  # Watch Events
+  # ============================================
+  - name: watches.triggered
+    partitions: 2
+    replication: 2
+    retention_ms: 604800000  # 7 days
+    description: "Published when a price/inventory watch is triggered"
+    consumers: []
+
+# ============================================
+# Configuration Notes
+# ============================================
+# 
+# Partitions:
+#   - Number of partitions for parallel processing
+#   - Default: 3 for high-volume topics, 2 for low-volume
+#   - More partitions = more parallelism but more overhead
+#
+# Replication:
+#   - Replication factor for fault tolerance
+#   - Default: 2 (minimum for Aiven high availability)
+#   - Higher replication = better durability but more storage
+#
+# Retention:
+#   - How long to keep messages in milliseconds
+#   - Common values:
+#     - 604800000 = 7 days
+#     - 2592000000 = 30 days
+#     - 7776000000 = 90 days
+#     - -1 = infinite retention (use with caution)
+#
+# Consumers:
+#   - List of consumer groups that subscribe to this topic
+#   - Used for documentation purposes
+#   - Consumer groups defined in backend/src/consumers/kafka.consumers.js
+#
+# ============================================
+# Consumer Groups
+# ============================================
+# - booking-status-group: Handles booking status updates and notifications
+# - payment-confirmation-group: Confirms bookings after successful payments
+# - analytics-group: Processes events for analytics and user traces
+# - notification-group: Creates and sends notifications to users
+# - inventory-update-group: Updates inventory when payments succeed
+# - watch-trigger-group: Triggers watches when inventory changes
+# - deal-event-group: Processes deal tagging events
+
