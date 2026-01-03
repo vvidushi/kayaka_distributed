@@ -1,0 +1,103 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: kayak-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongodb_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      cache_from:
+        - node:20-alpine
+    container_name: kayak-backend
+    restart: unless-stopped
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      ai-agent:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: 3000
+      JWT_SECRET: ${JWT_SECRET:-fallback-secret-change-me}
+      SESSION_SECRET: ${SESSION_SECRET:-fallback-session-secret-change-me}
+      AI_AGENT_URL: ${AI_AGENT_URL:-http://ai-agent:8000}
+      MONGODB_URI: ${MONGODB_URI:-mongodb://root:password@mongodb:27017/kayak?authSource=admin}
+    volumes:
+      - ./backend/kafka:/app/kafka:ro
+    healthcheck:
+      test: ["CMD", "node", "healthcheck.js"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 90s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      cache_from:
+        - node:20-alpine
+    container_name: kayak-frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./frontend/.env
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      VITE_API_URL: ${VITE_API_URL:-http://localhost:3000}
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  ai-agent:
+    build:
+      context: ./ai-agent
+      dockerfile: Dockerfile
+      cache_from:
+        - python:3.12-slim
+    container_name: kayak-ai-agent
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./ai-agent/.env
+    environment:
+      PORT: 8000
+      DATABASE_URL: ${SUPABASE_DATABASE_URL:-${DATABASE_URL:-}}
+      REDIS_URL: ${REDIS_URL:-${AI_AGENT_REDIS_URL:-}}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  mongodb_data:

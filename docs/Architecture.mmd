@@ -1,0 +1,141 @@
+flowchart TB
+    subgraph Client[" Client Layer"]
+        Browser[" Web Browser<br/>Chrome / Safari / Firefox"]
+    end
+
+    subgraph AWS["<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' width='20' height='20' /> AWS Cloud (us-east-1)"]
+        subgraph EKS["<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' width='16' height='16' /> Amazon EKS Cluster"]
+            subgraph Namespace[" Namespace: kayak"]
+                subgraph FrontendPod[" Frontend Pods (x2)"]
+                    FE_Container["<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' width='16' height='16' /> React + Vite<br/>Port: 5173"]
+                end
+                subgraph BackendPod[" Backend Pods (x2)"]
+                    BE_Container["<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' width='16' height='16' /> Express.js<br/>Port: 3000"]
+                end
+                subgraph AgentPod[" AI Agent Pods"]
+                    AI_Container["<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' width='16' height='16' /> FastAPI + Python<br/>Port: 8000"]
+                end
+                
+                FE_SVC[" Frontend LB"]
+                BE_SVC[" Backend LB"]
+            end
+            
+            subgraph NodeGroup[" EKS Node Group"]
+                Nodes["<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' width='16' height='16' /> EC2 (t3.medium)<br/>Auto-scaling: 1-4"]
+            end
+        end
+        
+        subgraph ECR[" Amazon ECR"]
+            ECR_FE[" kayak-dev-frontend"]
+            ECR_BE[" kayak-dev-backend"]
+            ECR_AI[" kayak-dev-agent"]
+        end
+        
+        ALB[" Application Load Balancer"]
+    end
+
+    subgraph LocalDev[" Local Development"]
+        direction LR
+        subgraph DockerCompose["Docker Compose"]
+            DC_FE[" Frontend :5173"]
+            DC_BE[" Backend :3000"]
+            DC_AI[" AI Agent :8000"]
+            DC_MONGO[" MongoDB :27017"]
+        end
+    end
+
+    subgraph CloudDB[" Managed Databases"]
+        subgraph Supabase[" Supabase (PostgreSQL)"]
+            PG_Tables[" Users<br/> Bookings<br/> Payments<br/> Reviews"]
+        end
+        subgraph MongoAtlas[" MongoDB Atlas"]
+            MONGO_Collections[" Flights<br/> Hotels<br/> Cars<br/> Analytics"]
+        end
+        subgraph RedisCloud[" Redis Cloud"]
+            Redis_Data[" Cache<br/> Sessions"]
+        end
+    end
+
+    subgraph ExtServices[" External Services"]
+        Firebase[" Firebase Storage<br/> Image Hosting"]
+        Kafka[" Aiven Kafka<br/> Event Streaming"]
+        OpenAI[" OpenAI API<br/> AI Concierge"]
+    end
+
+    subgraph IaC[" Infrastructure as Code"]
+        subgraph Terraform["<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg' width='16' height='16' /> Terraform"]
+            TF_EKS[" main.tf → EKS"]
+            TF_ECR[" modules/* → ECR"]
+        end
+        subgraph K8s["<img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' width='16' height='16' /> Kubernetes Manifests"]
+            K8s_Deploy[" *-deployment.yaml"]
+            K8s_NS[" namespace.yaml"]
+        end
+    end
+
+    %% Client to AWS
+    Browser -->|"HTTPS"| ALB
+    ALB --> FE_SVC --> FE_Container
+    ALB --> BE_SVC --> BE_Container
+    
+    %% Inter-service communication
+    FE_Container -->|"REST API"| BE_Container
+    BE_Container -->|"HTTP/WebSocket"| AI_Container
+    
+    %% ECR pulls
+    ECR_FE -.->|"docker pull"| FE_Container
+    ECR_BE -.->|"docker pull"| BE_Container
+    ECR_AI -.->|"docker pull"| AI_Container
+    
+    %% Backend to databases
+    BE_Container -->|"pg"| Supabase
+    BE_Container -->|"mongoose"| MongoAtlas
+    BE_Container -->|"ioredis"| RedisCloud
+    
+    %% Backend to external
+    BE_Container -->|"Firebase SDK"| Firebase
+    BE_Container -->|"KafkaJS"| Kafka
+    
+    %% AI Agent connections
+    AI_Container -->|"SQLModel"| Supabase
+    AI_Container -->|"API"| OpenAI
+    
+    %% Local dev flow
+    Browser -.->|"localhost"| DC_FE
+    DC_FE -.-> DC_BE -.-> DC_AI
+    DC_BE -.-> DC_MONGO
+    
+    %% IaC provisions
+    Terraform -.->|"provisions"| EKS
+    Terraform -.->|"creates"| ECR
+    K8s -.->|"deploys"| Namespace
+
+    %% Styles
+    classDef aws fill:#232f3e,stroke:#ff9900,color:#fff,stroke-width:2px
+    classDef eks fill:#326ce5,stroke:#fff,color:#fff
+    classDef react fill:#20232a,stroke:#61dafb,color:#61dafb,stroke-width:2px
+    classDef node fill:#339933,stroke:#fff,color:#fff
+    classDef python fill:#3776ab,stroke:#ffd43b,color:#fff
+    classDef postgres fill:#336791,stroke:#fff,color:#fff
+    classDef mongo fill:#47a248,stroke:#fff,color:#fff
+    classDef redis fill:#dc382d,stroke:#fff,color:#fff
+    classDef firebase fill:#ffca28,stroke:#f57c00,color:#000
+    classDef kafka fill:#231f20,stroke:#fff,color:#fff
+    classDef terraform fill:#7b42bc,stroke:#fff,color:#fff
+    classDef docker fill:#2496ed,stroke:#fff,color:#fff
+    classDef openai fill:#412991,stroke:#fff,color:#fff
+    
+    class AWS,ALB,ECR,ECR_FE,ECR_BE,ECR_AI,NodeGroup,Nodes aws
+    class EKS,Namespace,FE_SVC,BE_SVC eks
+    class FrontendPod,FE_Container,DC_FE react
+    class BackendPod,BE_Container,DC_BE node
+    class AgentPod,AI_Container,DC_AI python
+    class Supabase,PG_Tables postgres
+    class MongoAtlas,MONGO_Collections,DC_MONGO mongo
+    class RedisCloud,Redis_Data redis
+    class Firebase firebase
+    class Kafka kafka
+    class OpenAI openai
+    class Terraform,TF_EKS,TF_ECR,IaC terraform
+    class K8s,K8s_Deploy,K8s_NS eks
+    class LocalDev,DockerCompose docker

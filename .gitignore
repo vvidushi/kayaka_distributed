@@ -1,0 +1,49 @@
+*.pdf
+
+# Environment files with secrets
+.env
+.env.local
+.env.*
+scripts/.env
+
+# Credentials and sensitive data
+**/credentials.json
+**/*password*
+**/*secret*
+id_rsa
+*.pem
+*.key
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfr
+*.tfvars
+.terraform.lock.hcl
+terraform.rc
+terraform.d/
+
+# AWS
+.aws/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.vscode/
