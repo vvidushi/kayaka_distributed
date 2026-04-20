@@ -8,34 +8,6 @@ A cloud-native travel booking platform (flights, hotels, cars, payments) built a
 
 ![Kayak Distributed System — Complete Architecture](./docs/kayak_architecture.png)
 
-```
-                        ┌──────────────────────────────────────┐
-                        │   React 18 + Redux Toolkit           │
-                        │   Tailwind/DaisyUI  · localhost:5173 │
-                        └──────────┬───────────────┬───────────┘
-                                   │ REST /api/v1/* │ POST /api/ai/concierge
-                                   │ + Socket.IO    │
-                                   ▼               ▼
-┌──────────────────────────────────────┐   ┌──────────────────────────────────┐
-│     Express Backend (Node.js 20)     │   │  FastAPI AI Agent (Python 3.12)  │
-│  JWT Auth + RBAC | Search | Booking  │   │  LangGraph (Supervisor Agent)    │
-│  Payment | Admin | Inventory         │   │  → MongoAgent                    │
-│  ┌─────────────┐  ┌───────────────┐  │   │  → SupabaseAgent                 │
-│  │Kafka Produce│  │Kafka Consumer │  │   │  → WebAgent                      │
-│  └─────────────┘  └───────────────┘  │   │  Tools: Supabase MCP, Tavily,    │
-│  Socket.IO (real-time fan-out)       │◄──│         Weather API              │
-└──┬──────┬──────┬──────┬──────────────┘   │  OpenAI GPT-3.5-turbo            │
-   │      │      │      │                  └──────┬──────────────┬────────────┘
-   │      │      │      │                         │ via MCP      │ cache +
-   │      │      │      │ publish                 │ typed tools  │ conv state
-   │      │      │      │ events                  ▼              ▼
-   │      │      │      │ (async)         Supabase Postgres   Redis Cloud
-   ▼      ▼      ▼      ▼
-Supabase MongoDB Redis  Kafka
-Postgres Atlas  Cloud  (Aiven)   Firebase
-                                 Storage
-```
-
 ### Three Services
 
 | Service | Tech | Role |
