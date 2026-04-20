@@ -30,6 +30,8 @@ A cloud-native travel booking platform (flights, hotels, cars, payments) built a
 
 ## AI Concierge — How It Works
 
+![Agent Flow Diagram](./docs/agent-flow.png)
+
 The AI agent uses **LangChain + LangGraph** in a multi-agent setup.
 
 ### What is LangChain
