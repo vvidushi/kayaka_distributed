@@ -1,6 +1,133 @@
-# Kayak Simulation Platform
+# Kayak Distributed System
 
-Travel booking platform with Express.js backend, React frontend, and AI-agent service, organized as a Kafka-backed microservice pub/sub architecture (domain modules communicate via Kafka events and Socket.IO fan-out).
+A cloud-native travel booking platform (flights, hotels, cars, payments) built as a **microservice + event-driven** system with a multi-agent AI concierge.
+
+---
+
+## Architecture
+
+![Kayak Distributed System — Complete Architecture](./docs/kayak_architecture.png)
+
+```
+                        ┌──────────────────────────────────────┐
+                        │   React 18 + Redux Toolkit           │
+                        │   Tailwind/DaisyUI  · localhost:5173 │
+                        └──────────┬───────────────┬───────────┘
+                                   │ REST /api/v1/* │ POST /api/ai/concierge
+                                   │ + Socket.IO    │
+                                   ▼               ▼
+┌──────────────────────────────────────┐   ┌──────────────────────────────────┐
+│     Express Backend (Node.js 20)     │   │  FastAPI AI Agent (Python 3.12)  │
+│  JWT Auth + RBAC | Search | Booking  │   │  LangGraph (Supervisor Agent)    │
+│  Payment | Admin | Inventory         │   │  → MongoAgent                    │
+│  ┌─────────────┐  ┌───────────────┐  │   │  → SupabaseAgent                 │
+│  │Kafka Produce│  │Kafka Consumer │  │   │  → WebAgent                      │
+│  └─────────────┘  └───────────────┘  │   │  Tools: Supabase MCP, Tavily,    │
+│  Socket.IO (real-time fan-out)       │◄──│         Weather API              │
+└──┬──────┬──────┬──────┬──────────────┘   │  OpenAI GPT-3.5-turbo            │
+   │      │      │      │                  └──────┬──────────────┬────────────┘
+   │      │      │      │                         │ via MCP      │ cache +
+   │      │      │      │ publish                 │ typed tools  │ conv state
+   │      │      │      │ events                  ▼              ▼
+   │      │      │      │ (async)         Supabase Postgres   Redis Cloud
+   ▼      ▼      ▼      ▼
+Supabase MongoDB Redis  Kafka
+Postgres Atlas  Cloud  (Aiven)   Firebase
+                                 Storage
+```
+
+### Three Services
+
+| Service | Tech | Role |
+|---------|------|------|
+| **Backend** | Node.js 20, Express | REST API, Kafka producer/consumer, Socket.IO, JWT+RBAC |
+| **Frontend** | React 18, Vite, Redux Toolkit | UI, search, booking flow, AI chat |
+| **AI Agent** | Python 3.12, FastAPI | LangGraph multi-agent concierge |
+
+### Five Data Stores
+
+| Store | Used For |
+|-------|---------|
+| **Supabase Postgres** | Users, bookings, payments, flights, hotels, cars, deals, reviews. ACID + Prisma ORM. Also queried by AI agent via Supabase MCP. |
+| **MongoDB Atlas** | Sessions (TTL auto-expiry), audit logs, raw provider JSON (flexible schema). |
+| **Redis Cloud** | Search cache, Socket.IO pub/sub (multi-pod), AI tool cache, LangGraph conversation state. |
+| **Firebase Storage** | Hotel photos, airline logos. CDN-backed blob store. Images only. |
+| **Kafka (Aiven)** | Async event bus: `booking.created`, `payment.captured`, `inventory.decremented`, `notification.send`. |
+
+---
+
+## AI Concierge — How It Works
+
+The AI agent uses **LangChain + LangGraph** in a multi-agent setup.
+
+### What is LangChain
+LangChain is an open source orchestration framework that gives GPT **hands** — the ability to call real tools (your DB, web search, weather API) instead of guessing. It runs the **ReAct loop** automatically: GPT thinks → calls a tool → reads result → thinks again → answers.
+
+### What is LangGraph
+LangGraph is built on top of LangChain. It defines the AI system as a **flowchart** — nodes (steps) + edges (routing) + state (shared data). Instead of one agent with all tools, it routes to the right specialist.
+
+### Multi-Agent Architecture
+
+```
+User: "Show my last booking and weather in NYC"
+              ↓
+    LangGraph Supervisor Agent
+    reads message, decides routing
+              ↓
+    ┌─────────────────────────┐
+    ▼                         ▼
+SupabaseAgent            WebAgent
+(bookings, deals,        (Tavily web search,
+ payments via MCP)        Weather API)
+    ↓                         ↓
+get_my_bookings(42)      get_weather("NYC")
+→ Delta NYC $189          → 45°F cloudy
+    ↓                         ↓
+    └──────────┬──────────────┘
+               ↓
+    GPT composes final answer:
+    "Last booking: Delta NYC $189 on Jan 5.
+     NYC tomorrow: 45°F, cloudy — pack a jacket!"
+               ↓
+    Streamed to user via SSE
+    State saved to Redis (conversation memory)
+```
+
+### Three Specialist Agents
+
+| Agent | Has Access To | Handles |
+|-------|-------------|---------|
+| **MongoAgent** | MongoDB Atlas | User profiles, sessions, account data |
+| **SupabaseAgent** | Supabase Postgres via MCP | Bookings, payments, flight/hotel deals |
+| **WebAgent** | Tavily + Weather API | General travel info, live web, real-time weather |
+
+### Why Supabase MCP Instead of Raw SQL
+MCP exposes the database as **typed, named functions** — `get_my_bookings(user_id)`, `search_deals(city, date)`. GPT calls functions, not SQL. `DROP TABLE` doesn't exist as a function → GPT literally cannot do it. The `user_id` is always injected from JWT auth — never taken from the user's message.
+
+---
+
+## Kafka — Async Event Flow
+
+**Rule:** User waiting on a response → synchronous REST. Side-effect that can happen seconds later → Kafka.
+
+```
+User books a flight
+        ↓
+write booking → Supabase Postgres   ← synchronous (user waits, 50ms)
+publish booking.created → Kafka     ← 10ms, then user gets response ✅
+
+Meanwhile in background:
+  Consumer 1: booking.created   → charge payment → publish payment.captured
+  Consumer 2: payment.captured  → send confirmation email
+  Consumer 3: booking.created   → decrement seat inventory
+  Consumer 4: inventory.updated → invalidate Redis cache, write MongoDB audit log
+  Socket.IO                     → push real-time update to user's browser tab
+```
+
+Without Kafka: user waits ~1250ms (booking + payment + email + audit all inline).
+With Kafka: user waits ~60ms. Everything else runs async.
+
+---
 
 ## Quick Start
 
@@ -9,46 +136,32 @@ Travel booking platform with Express.js backend, React frontend, and AI-agent se
 - Node.js 20+
 - Docker & Docker Compose
 - Python 3.12+ (for AI-agent)
-- Cloud accounts: Supabase, MongoDB Atlas, Redis Cloud, Firebase
+- Cloud accounts: Supabase, MongoDB Atlas, Redis Cloud, Firebase, Aiven (Kafka)
 
 ### 1. Environment Setup
 
-**Backend** (`backend/.env`):
-```env
-PORT=3000
-DATABASE_URL=postgresql://...  # Supabase
-MONGODB_URI=mongodb+srv://...  # MongoDB Atlas
-REDIS_URL=redis://...          # Redis Cloud
-JWT_SECRET=...                  # Generate with: node scripts/generate-secrets.js
-SESSION_SECRET=...              # Generate with: node scripts/generate-secrets.js
-FIREBASE_SERVICE_ACCOUNT={...} # Firebase JSON
-FIREBASE_STORAGE_BUCKET=...
-CACHE_ENABLED=false            # Set to 'true' to enable Redis caching
-KAFKA_ENABLED=false            # Set to 'true' if using Kafka
-AI_AGENT_URL=http://ai-agent:8000
+Copy the example files and fill in your own credentials:
+
+```bash
+cp backend/.env.example        backend/.env
+cp frontend/.env.example       frontend/.env
+cp ai-agent/.env.example       ai-agent/.env
 ```
 
-**Frontend** (`frontend/.env`):
-```env
-VITE_API_URL=http://localhost:3000
-VITE_FIREBASE_API_KEY=...
-VITE_FIREBASE_PROJECT_ID=...
-VITE_FIREBASE_STORAGE_BUCKET=...
-```
+Each `.env.example` file lists every required variable with a description. You will need accounts for:
 
-**AI-Agent** (`ai-agent/.env`):
-```env
-PORT=8000
-DATABASE_URL=postgresql://<supabase-user>:<password>@<host>:6543/postgres
-REDIS_URL=redis://:<password>@<host>:6379/0
-OPENAI_API_KEY=...
-SUPABASE_MCP_URL=https://mcp.supabase.com/mcp?project_ref=...
-SUPABASE_ACCESS_TOKEN=sbp_...
-TAVILY_ENABLED=true
-TAVILY_API_KEY=tvly-...
-WEATHER_API_KEY=<openweathermap_or_weatherapi_key>
-```
-If your frontend passes authenticated user info, you can drop the `user_id` entirely. When no user context is provided, the concierge now prompts “Please log in to see your account data” before running Supabase queries.
+| Service | Variable prefix | Get it from |
+|---------|----------------|-------------|
+| Supabase | `DATABASE_URL`, `SUPABASE_MCP_URL`, `SUPABASE_ACCESS_TOKEN` | [supabase.com](https://supabase.com) |
+| MongoDB Atlas | `MONGODB_URI` | [mongodb.com/atlas](https://mongodb.com/atlas) |
+| Redis Cloud | `REDIS_URL` | [redis.com/cloud](https://redis.com/cloud) |
+| Firebase | `FIREBASE_SERVICE_ACCOUNT`, `FIREBASE_STORAGE_BUCKET` | [firebase.google.com](https://firebase.google.com) |
+| OpenAI | `OPENAI_API_KEY` | [platform.openai.com](https://platform.openai.com) |
+| Tavily | `TAVILY_API_KEY` | [tavily.com](https://tavily.com) |
+| OpenWeatherMap | `WEATHER_API_KEY` | [openweathermap.org](https://openweathermap.org) |
+| Aiven Kafka | `KAFKA_BROKER`, `KAFKA_USERNAME`, `KAFKA_PASSWORD` | [aiven.io](https://aiven.io) |
+
+> **Never commit `.env` files.** They are in `.gitignore`. All secrets stay local or in your cloud provider's secret store.
 
 ### 2. Start with Docker
 
@@ -76,8 +189,8 @@ Services:
 
 ```bash
 cd backend
-npm run seed:us-data  # Seeds flights, hotels, cars for US cities
-npm run seed:test-users  # Creates test users for E2E tests
+npm run seed:us-data    # Seeds flights, hotels, cars for US cities
+npm run seed:test-users # Creates test users for E2E tests
 ```
 
 ### 4. Local Development
@@ -103,6 +216,7 @@ cd ai-agent
 source .venv/bin/activate
 uvicorn main:app --reload  # http://localhost:8000
 ```
+
 ```powershell
 # Windows
 cd ai-agent
@@ -111,27 +225,42 @@ pwsh -ExecutionPolicy Bypass -File ./update-requirements.ps1
 uvicorn main:app --reload  # http://localhost:8000
 ```
 
+---
+
 ## Tech Stack
 
-**Backend:** Node.js 20, Express.js, PostgreSQL (Supabase), MongoDB Atlas, Redis Cloud, Kafka (Aiven), Firebase Storage  
-**Frontend:** React 18, Vite, Redux Toolkit, Tailwind CSS + DaisyUI  
-**AI-Agent:** Python 3.12, FastAPI, Supabase Postgres, Redis Cache
+| Layer | Tech |
+|-------|------|
+| Frontend | React 18, Vite, Redux Toolkit, Tailwind CSS + DaisyUI |
+| Backend | Node.js 20, Express.js, Prisma ORM |
+| AI Agent | Python 3.12, FastAPI, LangChain, LangGraph, OpenAI GPT |
+| Databases | Supabase Postgres, MongoDB Atlas, Redis Cloud, Firebase Storage |
+| Messaging | Kafka (Aiven), Socket.IO |
+| Auth | JWT + RBAC |
+| Testing | Jest (unit), Playwright (E2E), JMeter (load) |
+
+---
 
 ## Features
 
-- User authentication (JWT + RBAC)
+- User authentication (JWT + RBAC — admin vs end-user)
 - Flight, hotel, car search and booking
 - Payment processing
 - Admin inventory management
-- AI concierge service (Supabase MCP + LangChain/LangGraph tools for reviews/bookings/deals/payments, Tavily web search, Weather lookup)
-- Kafka event streaming
-- Redis caching (optional, disabled by default)
+- Real-time booking confirmations via Socket.IO
+- AI concierge (LangGraph multi-agent: Supabase MCP + Tavily web search + Weather API)
+- Kafka event streaming (booking → payment → inventory → notification)
+- Redis caching (toggle via `CACHE_ENABLED`)
 - Firebase image storage
+
+---
 
 ## API
 
-All endpoints: `/api/v1/*`  
-See `api-docs/openapi.yaml` for full specification
+All endpoints: `/api/v1/*`
+See `api-docs/openapi.yaml` for full specification.
+
+---
 
 ## Testing
 
@@ -141,12 +270,15 @@ npm install
 npm test  # Runs Playwright E2E tests
 ```
 
-Test users are auto-created via `globalSetup` in `playwright.config.js`
+Test users are auto-created via `globalSetup` in `playwright.config.js`.
+
+---
 
 ## Documentation
 
-- [Database Setup](./backend/docs/DATABASE_SETUP.md) - Cloud database configuration
-- [Firebase Setup](./docs/FIREBASE_SETUP.md) - Image storage setup
-- [Kafka Setup](./backend/kafka/README.md) - Event streaming
-- [Sample Deals Feed](./docs/SAMPLE_DEALS_FEED.md) - Hourly rotating flight/hotel/car deals for the concierge AI
-- [API Docs](./api-docs/README.md) - OpenAPI specification
+- [Database Setup](./backend/docs/DATABASE_SETUP.md) — Cloud database configuration
+- [Firebase Setup](./docs/FIREBASE_SETUP.md) — Image storage setup
+- [Kafka Setup](./backend/kafka/README.md) — Event streaming
+- [Sample Deals Feed](./docs/SAMPLE_DEALS_FEED.md) — Hourly rotating flight/hotel/car deals for the AI concierge
+- [API Docs](./api-docs/README.md) — OpenAPI specification
+- [Cloud Services Verification](./CLOUD_SERVICES_VERIFICATION.md) — Verifies all DBs are cloud-only (no localhost URIs)
